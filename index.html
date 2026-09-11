@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -220,21 +220,366 @@
 
 
                 <!-- Temporary empty dashboard -->
-                <div class="dashboard-placeholder">
 
-                    <span class="material-icons">
-                        analytics
-                    </span>
+<!-- =========================
+     DASHBOARD STATS
+========================== -->
 
-                    <h3>
-                        داشبورد شما آماده است
-                    </h3>
+<div class="stats-grid">
 
-                    <p>
-                        در مرحله بعد کارت‌های آماری، نمودار فروش و اطلاعات کسب‌وکار به این قسمت اضافه می‌شوند.
-                    </p>
+    <!-- Sales -->
+    <article class="stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-icon sales">
+                <span class="material-icons">
+                    payments
+                </span>
+            </div>
+
+            <span class="stat-period">
+                امروز
+            </span>
+
+        </div>
+
+        <div class="stat-card-content">
+
+            <span class="stat-label">
+                فروش امروز
+            </span>
+
+            <strong class="stat-value" data-stat="sales">
+                ۱۲۵,۸۰۰,۰۰۰
+            </strong>
+
+            <div class="stat-change positive">
+
+                <span class="material-icons">
+                    trending_up
+                </span>
+
+                <span>
+                    ۱۲٪ افزایش نسبت به دیروز
+                </span>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- Orders -->
+    <article class="stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-icon orders">
+                <span class="material-icons">
+                    shopping_bag
+                </span>
+            </div>
+
+            <span class="stat-period">
+                امروز
+            </span>
+
+        </div>
+
+        <div class="stat-card-content">
+
+            <span class="stat-label">
+                سفارش‌های جدید
+            </span>
+
+            <strong class="stat-value" data-stat="orders">
+                ۲۴
+            </strong>
+
+            <div class="stat-change positive">
+
+                <span class="material-icons">
+                    trending_up
+                </span>
+
+                <span>
+                    ۸٪ بیشتر از دیروز
+                </span>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- Customers -->
+    <article class="stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-icon customers">
+                <span class="material-icons">
+                    groups
+                </span>
+            </div>
+
+            <span class="stat-period">
+                این ماه
+            </span>
+
+        </div>
+
+        <div class="stat-card-content">
+
+            <span class="stat-label">
+                تعداد مشتریان
+            </span>
+
+            <strong class="stat-value" data-stat="customers">
+                ۳,۴۸۲
+            </strong>
+
+            <div class="stat-change positive">
+
+                <span class="material-icons">
+                    trending_up
+                </span>
+
+                <span>
+                    ۱۵٪ رشد این ماه
+                </span>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- Inventory -->
+    <article class="stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-icon inventory">
+                <span class="material-icons">
+                    inventory_2
+                </span>
+            </div>
+
+            <span class="stat-period">
+                فعلی
+            </span>
+
+        </div>
+
+        <div class="stat-card-content">
+
+            <span class="stat-label">
+                موجودی محصولات
+            </span>
+
+            <strong class="stat-value" data-stat="inventory">
+                ۸۶۷
+            </strong>
+
+            <div class="stat-change warning">
+
+                <span class="material-icons">
+                    warning_amber
+                </span>
+
+                <span>
+                    ۱۲ محصول کم‌موجود
+                </span>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<!-- =========================
+     SALES CHART
+========================== -->
+
+<section class="dashboard-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-eyebrow">
+                عملکرد فروش
+            </span>
+
+            <h3>
+                نمودار فروش
+            </h3>
+
+        </div>
+
+
+        <div class="chart-actions">
+
+            <button class="chart-filter active" data-period="week">
+                هفته
+            </button>
+
+            <button class="chart-filter" data-period="month">
+                ماه
+            </button>
+
+            <button class="chart-filter" data-period="year">
+                سال
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="chart-card">
+
+        <div class="chart-summary">
+
+            <div>
+
+                <span>
+                    فروش کل
+                </span>
+
+                <strong id="totalSales">
+                    ۸۷۶,۵۰۰,۰۰۰ تومان
+                </strong>
+
+            </div>
+
+            <div class="chart-growth">
+
+                <span class="material-icons">
+                    trending_up
+                </span>
+
+                <span>
+                    ۱۸.۴٪
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Chart -->
+        <div class="sales-chart">
+
+            <div class="chart-y-axis">
+
+                <span>۲۰۰م</span>
+                <span>۱۵۰م</span>
+                <span>۱۰۰م</span>
+                <span>۵۰م</span>
+                <span>۰</span>
+
+            </div>
+
+
+            <div class="chart-area">
+
+                <div class="chart-grid-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <svg
+                    class="chart-svg"
+                    viewBox="0 0 800 280"
+                    preserveAspectRatio="none"
+                    aria-label="نمودار فروش"
+                >
+
+                    <defs>
+
+                        <linearGradient
+                            id="chartGradient"
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="1"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-opacity="0.25"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-opacity="0"
+                            />
+
+                        </linearGradient>
+
+                    </defs>
+
+
+                    <path
+                        class="chart-fill"
+                        d="M0 210
+                           C80 180, 100 190, 160 145
+                           C220 100, 250 165, 320 125
+                           C390 85, 410 125, 470 90
+                           C540 50, 570 105, 630 70
+                           C700 35, 740 70, 800 25
+                           L800 280
+                           L0 280 Z"
+                    />
+
+
+                    <path
+                        class="chart-line"
+                        d="M0 210
+                           C80 180, 100 190, 160 145
+                           C220 100, 250 165, 320 125
+                           C390 85, 410 125, 470 90
+                           C540 50, 570 105, 630 70
+                           C700 35, 740 70, 800 25"
+                    />
+
+                </svg>
+
+
+                <div class="chart-x-axis">
+
+                    <span>شنبه</span>
+                    <span>یکشنبه</span>
+                    <span>دوشنبه</span>
+                    <span>سه‌شنبه</span>
+                    <span>چهارشنبه</span>
+                    <span>پنجشنبه</span>
+                    <span>جمعه</span>
 
                 </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
             </section>
 

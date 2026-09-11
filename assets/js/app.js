@@ -157,3 +157,159 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+const chartFilters =
+    document.querySelectorAll(".chart-filter");
+
+const totalSales =
+    document.getElementById("totalSales");
+
+
+/*
+ * Chart data
+ */
+
+const chartData = {
+
+    week: {
+        sales: "۸۷۶,۵۰۰,۰۰۰ تومان"
+    },
+
+    month: {
+        sales: "۳,۶۸۵,۲۰۰,۰۰۰ تومان"
+    },
+
+    year: {
+        sales: "۴۲,۸۷۶,۰۰۰,۰۰۰ تومان"
+    }
+
+};
+
+
+/*
+ * Change chart period
+ */
+
+chartFilters.forEach(filter => {
+
+    filter.addEventListener("click", () => {
+
+        chartFilters.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        filter.classList.add("active");
+
+        const period =
+            filter.dataset.period;
+
+        if (
+            totalSales &&
+            chartData[period]
+        ) {
+
+            totalSales.textContent =
+                chartData[period].sales;
+
+        }
+
+    });
+
+});
+
+
+/*
+ * Simple number animation
+ */
+
+function animateNumber(element) {
+
+    if (!element) return;
+
+    const original =
+        element.textContent.trim();
+
+    const persianNumbers =
+        "۰۱۲۳۴۵۶۷۸۹";
+
+    const englishNumbers =
+        "0123456789";
+
+    let numericValue = "";
+
+    for (const character of original) {
+
+        const index =
+            persianNumbers.indexOf(character);
+
+        if (index !== -1) {
+
+            numericValue +=
+                englishNumbers[index];
+
+        } else if (
+            character >= "0" &&
+            character <= "9"
+        ) {
+
+            numericValue += character;
+
+        }
+
+    }
+
+    const target =
+        Number(numericValue);
+
+    if (!target || target <= 0) return;
+
+    const duration = 900;
+
+    const startTime =
+        performance.now();
+
+    function update(currentTime) {
+
+        const progress =
+            Math.min(
+                (currentTime - startTime) / duration,
+                1
+            );
+
+        const eased =
+            1 - Math.pow(1 - progress, 3);
+
+        const current =
+            Math.floor(target * eased);
+
+        element.textContent =
+            current.toLocaleString("fa-IR");
+
+        if (progress < 1) {
+
+            requestAnimationFrame(update);
+
+        }
+
+    }
+
+    requestAnimationFrame(update);
+}
+
+
+/*
+ * Animate dashboard values
+ */
+
+document
+    .querySelectorAll(".stat-value")
+    .forEach(element => {
+
+        animateNumber(element);
+
+    });
+
