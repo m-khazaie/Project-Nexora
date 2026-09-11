@@ -1,0 +1,634 @@
+/* =========================================
+   ORDERS PAGE
+========================================= */
+
+.page-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.page-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.page-intro h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.page-intro p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    height: 44px;
+    padding: 0 18px;
+
+    border-radius: 12px;
+    border: none;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: #fff;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+.secondary-btn {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+
+/* =========================================
+   ORDER STATS
+========================================= */
+
+.order-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.order-stat-card {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.order-stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.order-stat-label {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.order-stat-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+}
+
+.order-stat-icon .material-icons {
+    font-size: 21px;
+}
+
+.order-stat-icon.blue {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.order-stat-icon.orange {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.order-stat-icon.purple {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.order-stat-icon.green {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.order-stat-value {
+    display: block;
+    margin-top: 17px;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.order-stat-footer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-top: 9px;
+
+    font-size: 12px;
+}
+
+.order-stat-footer .material-icons {
+    font-size: 16px;
+}
+
+.order-stat-footer.positive {
+    color: #059669;
+}
+
+.order-stat-footer.neutral {
+    color: var(--text-muted);
+}
+
+
+/* =========================================
+   ORDERS SECTION
+========================================= */
+
+.orders-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.orders-section-header {
+    padding: 24px 24px 18px;
+}
+
+.orders-section-header h2 {
+    margin: 0 0 7px;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.orders-section-header p {
+    margin: 0;
+
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.orders-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 24px 20px;
+}
+
+.order-search {
+    flex: 1;
+
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    background: var(--background);
+}
+
+.order-search .material-icons {
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+.order-search input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.order-filter {
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    background: var(--background);
+}
+
+.order-filter .material-icons {
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+.order-filter select {
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.orders-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 16px 20px;
+
+    text-align: right;
+
+    border-top: 1px solid var(--border);
+
+    white-space: nowrap;
+}
+
+.orders-table th {
+    background: var(--background);
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.orders-table td {
+    font-size: 13px;
+}
+
+.orders-table tbody tr {
+    transition: 0.2s ease;
+}
+
+.orders-table tbody tr:hover {
+    background: var(--background);
+}
+
+.orders-table input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CUSTOMER
+========================================= */
+
+.customer-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.customer-avatar {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--accent-soft);
+    color: var(--accent);
+
+    font-weight: 700;
+}
+
+.customer-cell strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+.customer-cell span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.order-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.order-status.shipped {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.order-status.processing {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.order-status.pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.order-status.cancelled {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+
+/* =========================================
+   TABLE ACTION
+========================================= */
+
+.table-action {
+    width: 34px;
+    height: 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: var(--text-muted);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.table-action:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.table-action .material-icons {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.orders-empty {
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.orders-empty.show {
+    display: block;
+}
+
+.orders-empty .material-icons {
+    font-size: 48px;
+    color: var(--text-muted);
+}
+
+.orders-empty h3 {
+    margin: 12px 0 6px;
+}
+
+.orders-empty p {
+    margin: 0;
+
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.orders-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 24px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination-btn {
+    min-width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.pagination-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.pagination-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.pagination-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-btn .material-icons {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .order-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .page-intro {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-intro h1 {
+        font-size: 23px;
+    }
+
+    .primary-btn {
+        width: 100%;
+    }
+
+    .orders-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .order-search,
+    .order-filter,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .orders-pagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .order-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .orders-section-header {
+        padding: 20px 16px 16px;
+    }
+
+    .orders-toolbar {
+        padding: 0 16px 18px;
+    }
+
+    .orders-pagination {
+        padding: 16px;
+    }
+
+}

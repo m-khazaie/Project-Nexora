@@ -6,10 +6,24 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById("sidebarOverlay");
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    /* =========================================
+       ELEMENTS
+    ========================================= */
 
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const overlay =
+        document.getElementById("sidebarOverlay");
+
+    const mobileMenuBtn =
+        document.getElementById("mobileMenuBtn");
+
+    const navItems =
+        document.querySelectorAll(".nav-item");
+
+    const mobileNavItems =
+        document.querySelectorAll(".mobile-nav-item");
 
 
     /* =========================================
@@ -59,7 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (overlay) {
 
-        overlay.addEventListener("click", closeSidebar);
+        overlay.addEventListener(
+            "click",
+            closeSidebar
+        );
 
     }
 
@@ -69,26 +86,99 @@ document.addEventListener("DOMContentLoaded", () => {
        SIDEBAR NAVIGATION
     ========================================= */
 
-    const navItems = document.querySelectorAll(".nav-item");
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop() || "index.html";
+
+
+    /*
+     * تعیین خودکار صفحه فعال
+     */
+
+    navItems.forEach(item => {
+
+        const href =
+            item.getAttribute("href");
+
+        if (
+            href &&
+            href !== "#" &&
+            href === currentPage
+        ) {
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+
+    /*
+     * لینک‌های واقعی نباید preventDefault داشته باشند
+     */
 
     navItems.forEach(item => {
 
         item.addEventListener("click", event => {
 
+            const href =
+                item.getAttribute("href");
+
+
+            /*
+             * اگر لینک واقعی است:
+             * اجازه بده مرورگر خودش صفحه را باز کند.
+             */
+
+            if (
+                href &&
+                href !== "#" &&
+                !href.startsWith("javascript:")
+            ) {
+
+                /*
+                 * فقط برای ظاهر Active
+                 */
+
+                navItems.forEach(nav => {
+
+                    nav.classList.remove("active");
+
+                });
+
+                item.classList.add("active");
+
+
+                /*
+                 * بستن Sidebar در موبایل
+                 */
+
+                if (window.innerWidth <= 760) {
+
+                    closeSidebar();
+
+                }
+
+
+                return;
+
+            }
+
+
+            /*
+             * لینک‌هایی که هنوز صفحه ندارند
+             */
+
             event.preventDefault();
 
             navItems.forEach(nav => {
+
                 nav.classList.remove("active");
+
             });
 
             item.classList.add("active");
-
-            /*
-             * Close sidebar on mobile
-             */
-            if (window.innerWidth <= 760) {
-                closeSidebar();
-            }
 
         });
 
@@ -100,21 +190,63 @@ document.addEventListener("DOMContentLoaded", () => {
        MOBILE NAVIGATION
     ========================================= */
 
-    const mobileNavItems =
-        document.querySelectorAll(".mobile-nav-item");
-
     mobileNavItems.forEach(item => {
 
         item.addEventListener("click", event => {
 
-            event.preventDefault();
+            /*
+             * دکمه + فقط یک دکمه است
+             */
 
-            if (item.classList.contains("mobile-add")) {
+            if (
+                item.classList.contains("mobile-add")
+            ) {
+
+                event.preventDefault();
+
                 return;
+
             }
 
+
+            const href =
+                item.getAttribute("href");
+
+
+            /*
+             * اگر لینک واقعی است،
+             * اجازه بده مرورگر Navigate کند.
+             */
+
+            if (
+                href &&
+                href !== "#" &&
+                !href.startsWith("javascript:")
+            ) {
+
+                mobileNavItems.forEach(nav => {
+
+                    nav.classList.remove("active");
+
+                });
+
+                item.classList.add("active");
+
+                return;
+
+            }
+
+
+            /*
+             * لینک بدون صفحه
+             */
+
+            event.preventDefault();
+
             mobileNavItems.forEach(nav => {
+
                 nav.classList.remove("active");
+
             });
 
             item.classList.add("active");
@@ -158,6 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
 /* =========================================
    DASHBOARD
 ========================================= */
@@ -169,9 +302,9 @@ const totalSales =
     document.getElementById("totalSales");
 
 
-/*
- * Chart data
- */
+/* =========================================
+   CHART DATA
+========================================= */
 
 const chartData = {
 
@@ -190,22 +323,27 @@ const chartData = {
 };
 
 
-/*
- * Change chart period
- */
+
+/* =========================================
+   CHANGE CHART PERIOD
+========================================= */
 
 chartFilters.forEach(filter => {
 
     filter.addEventListener("click", () => {
 
         chartFilters.forEach(item => {
+
             item.classList.remove("active");
+
         });
 
         filter.classList.add("active");
 
+
         const period =
             filter.dataset.period;
+
 
         if (
             totalSales &&
@@ -222,16 +360,19 @@ chartFilters.forEach(filter => {
 });
 
 
-/*
- * Simple number animation
- */
+
+/* =========================================
+   SIMPLE NUMBER ANIMATION
+========================================= */
 
 function animateNumber(element) {
 
     if (!element) return;
 
+
     const original =
         element.textContent.trim();
+
 
     const persianNumbers =
         "۰۱۲۳۴۵۶۷۸۹";
@@ -239,12 +380,15 @@ function animateNumber(element) {
     const englishNumbers =
         "0123456789";
 
+
     let numericValue = "";
+
 
     for (const character of original) {
 
         const index =
             persianNumbers.indexOf(character);
+
 
         if (index !== -1) {
 
@@ -262,15 +406,20 @@ function animateNumber(element) {
 
     }
 
+
     const target =
         Number(numericValue);
 
+
     if (!target || target <= 0) return;
+
 
     const duration = 900;
 
+
     const startTime =
         performance.now();
+
 
     function update(currentTime) {
 
@@ -280,14 +429,18 @@ function animateNumber(element) {
                 1
             );
 
+
         const eased =
             1 - Math.pow(1 - progress, 3);
+
 
         const current =
             Math.floor(target * eased);
 
+
         element.textContent =
             current.toLocaleString("fa-IR");
+
 
         if (progress < 1) {
 
@@ -297,13 +450,16 @@ function animateNumber(element) {
 
     }
 
+
     requestAnimationFrame(update);
+
 }
 
 
-/*
- * Animate dashboard values
- */
+
+/* =========================================
+   ANIMATE DASHBOARD VALUES
+========================================= */
 
 document
     .querySelectorAll(".stat-value")

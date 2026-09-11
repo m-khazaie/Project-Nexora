@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سفارش‌ها | داشبورد</title>
+
+    <!-- Vazirmatn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Material Icons -->
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/orders.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-icon">
+                <span class="material-icons">dashboard</span>
+            </div>
+
+            <div>
+                <strong>مدیریت‌یار</strong>
+                <small>پنل مدیریت</small>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-item">
+                <span class="material-icons">home</span>
+                <span>نمای کلی</span>
+            </a>
+
+            <a href="orders.html" class="nav-item active">
+                <span class="material-icons">shopping_cart</span>
+                <span>سفارش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">groups</span>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">inventory_2</span>
+                <span>محصولات</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">payments</span>
+                <span>تراکنش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">bar_chart</span>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">notifications</span>
+                <span>اعلان‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">settings</span>
+                <span>تنظیمات</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    م
+                </div>
+
+                <div>
+                    <strong>مدیر سیستم</strong>
+                    <span>مدیریت فروشگاه</span>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= OVERLAY ================= -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="app-shell">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <div class="header-title">
+                <span>سفارش‌ها</span>
+                <small>مدیریت و بررسی سفارش‌های فروشگاه</small>
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="header-icon-btn">
+                    <span class="material-icons">search</span>
+                </button>
+
+                <button class="header-icon-btn">
+                    <span class="material-icons">notifications_none</span>
+                </button>
+
+                <button class="header-profile">
+                    <span class="header-avatar">م</span>
+                    <span class="header-profile-name">مدیر</span>
+                    <span class="material-icons">keyboard_arrow_down</span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <main class="main-content">
+
+            <!-- PAGE INTRO -->
+
+            <section class="page-intro">
+
+                <div>
+                    <span class="page-eyebrow">مدیریت فروش</span>
+
+                    <h1>سفارش‌های فروشگاه</h1>
+
+                    <p>
+                        در این بخش می‌توانید سفارش‌ها را بررسی،
+                        وضعیت آن‌ها را مدیریت و اطلاعات مشتریان را مشاهده کنید.
+                    </p>
+                </div>
+
+                <button class="primary-btn" id="newOrderBtn">
+                    <span class="material-icons">add</span>
+                    سفارش جدید
+                </button>
+
+            </section>
+
+
+            <!-- ================= ORDER STATS ================= -->
+
+            <section class="order-stats">
+
+                <div class="order-stat-card">
+
+                    <div class="order-stat-top">
+                        <span class="order-stat-label">کل سفارش‌ها</span>
+
+                        <div class="order-stat-icon blue">
+                            <span class="material-icons">shopping_bag</span>
+                        </div>
+                    </div>
+
+                    <strong class="order-stat-value">1,248</strong>
+
+                    <div class="order-stat-footer positive">
+                        <span class="material-icons">trending_up</span>
+                        8.4٪ بیشتر از ماه قبل
+                    </div>
+
+                </div>
+
+
+                <div class="order-stat-card">
+
+                    <div class="order-stat-top">
+                        <span class="order-stat-label">در انتظار پرداخت</span>
+
+                        <div class="order-stat-icon orange">
+                            <span class="material-icons">schedule</span>
+                        </div>
+                    </div>
+
+                    <strong class="order-stat-value">86</strong>
+
+                    <div class="order-stat-footer neutral">
+                        نیازمند بررسی
+                    </div>
+
+                </div>
+
+
+                <div class="order-stat-card">
+
+                    <div class="order-stat-top">
+                        <span class="order-stat-label">در حال پردازش</span>
+
+                        <div class="order-stat-icon purple">
+                            <span class="material-icons">inventory</span>
+                        </div>
+                    </div>
+
+                    <strong class="order-stat-value">124</strong>
+
+                    <div class="order-stat-footer neutral">
+                        در حال آماده‌سازی
+                    </div>
+
+                </div>
+
+
+                <div class="order-stat-card">
+
+                    <div class="order-stat-top">
+                        <span class="order-stat-label">ارسال‌شده</span>
+
+                        <div class="order-stat-icon green">
+                            <span class="material-icons">local_shipping</span>
+                        </div>
+                    </div>
+
+                    <strong class="order-stat-value">1,038</strong>
+
+                    <div class="order-stat-footer positive">
+                        <span class="material-icons">check_circle</span>
+                        83٪ از سفارش‌ها
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ORDERS SECTION ================= -->
+
+            <section class="orders-section">
+
+                <div class="orders-section-header">
+
+                    <div>
+                        <h2>لیست سفارش‌ها</h2>
+
+                        <p>
+                            آخرین سفارش‌های ثبت‌شده در فروشگاه
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FILTER BAR -->
+
+                <div class="orders-toolbar">
+
+                    <div class="order-search">
+
+                        <span class="material-icons">search</span>
+
+                        <input
+                            type="text"
+                            id="orderSearch"
+                            placeholder="جستجوی شماره سفارش یا نام مشتری..."
+                        >
+
+                    </div>
+
+
+                    <div class="order-filter">
+
+                        <span class="material-icons">filter_list</span>
+
+                        <select id="orderStatusFilter">
+
+                            <option value="all">همه وضعیت‌ها</option>
+                            <option value="pending">در انتظار پرداخت</option>
+                            <option value="processing">در حال پردازش</option>
+                            <option value="shipped">ارسال‌شده</option>
+                            <option value="cancelled">لغوشده</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button class="secondary-btn" id="resetOrders">
+
+                        <span class="material-icons">restart_alt</span>
+
+                        پاک کردن فیلتر
+
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="orders-table-wrapper">
+
+                    <table class="orders-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    <input type="checkbox" id="selectAllOrders">
+                                </th>
+
+                                <th>شماره سفارش</th>
+
+                                <th>مشتری</th>
+
+                                <th>مبلغ</th>
+
+                                <th>تاریخ</th>
+
+                                <th>وضعیت</th>
+
+                                <th>عملیات</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="ordersTableBody">
+
+                            <tr
+                                data-status="shipped"
+                                data-search="10024 علی رضایی"
+                            >
+
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+
+                                <td>
+                                    <strong>#ORD-10024</strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="customer-cell">
+
+                                        <div class="customer-avatar">ع</div>
+
+                                        <div>
+                                            <strong>علی رضایی</strong>
+                                            <span>ali@example.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>۲,۴۸۰,۰۰۰ تومان</td>
+
+                                <td>۲۴ شهریور ۱۴۰۵</td>
+
+                                <td>
+                                    <span class="order-status shipped">
+                                        ارسال‌شده
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="table-action"
+                                        title="مشاهده سفارش"
+                                    >
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-status="processing"
+                                data-search="10023 سارا احمدی"
+                            >
+
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+
+                                <td>
+                                    <strong>#ORD-10023</strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="customer-cell">
+
+                                        <div class="customer-avatar">س</div>
+
+                                        <div>
+                                            <strong>سارا احمدی</strong>
+                                            <span>sara@example.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>۱,۸۹۰,۰۰۰ تومان</td>
+
+                                <td>۲۴ شهریور ۱۴۰۵</td>
+
+                                <td>
+                                    <span class="order-status processing">
+                                        در حال پردازش
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button class="table-action">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-status="pending"
+                                data-search="10022 محمد کریمی"
+                            >
+
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+
+                                <td>
+                                    <strong>#ORD-10022</strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="customer-cell">
+
+                                        <div class="customer-avatar">م</div>
+
+                                        <div>
+                                            <strong>محمد کریمی</strong>
+                                            <span>mohammad@example.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>۷۵۰,۰۰۰ تومان</td>
+
+                                <td>۲۳ شهریور ۱۴۰۵</td>
+
+                                <td>
+                                    <span class="order-status pending">
+                                        در انتظار پرداخت
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button class="table-action">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-status="shipped"
+                                data-search="10021 نگار محمدی"
+                            >
+
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+
+                                <td>
+                                    <strong>#ORD-10021</strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="customer-cell">
+
+                                        <div class="customer-avatar">ن</div>
+
+                                        <div>
+                                            <strong>نگار محمدی</strong>
+                                            <span>negar@example.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>۳,۲۵۰,۰۰۰ تومان</td>
+
+                                <td>۲۳ شهریور ۱۴۰۵</td>
+
+                                <td>
+                                    <span class="order-status shipped">
+                                        ارسال‌شده
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button class="table-action">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr
+                                data-status="cancelled"
+                                data-search="10020 رضا مرادی"
+                            >
+
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+
+                                <td>
+                                    <strong>#ORD-10020</strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="customer-cell">
+
+                                        <div class="customer-avatar">ر</div>
+
+                                        <div>
+                                            <strong>رضا مرادی</strong>
+                                            <span>reza@example.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>۱,۱۵۰,۰۰۰ تومان</td>
+
+                                <td>۲۲ شهریور ۱۴۰۵</td>
+
+                                <td>
+                                    <span class="order-status cancelled">
+                                        لغوشده
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button class="table-action">
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div class="orders-empty" id="ordersEmpty">
+
+                        <span class="material-icons">search_off</span>
+
+                        <h3>سفارشی پیدا نشد</h3>
+
+                        <p>
+                            با تغییر عبارت جستجو یا فیلتر وضعیت دوباره امتحان کنید.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="orders-pagination">
+
+                    <span id="ordersResultText">
+                        نمایش ۱ تا ۵ از ۱٬۲۴۸ سفارش
+                    </span>
+
+                    <div class="pagination-buttons">
+
+                        <button class="pagination-btn disabled">
+                            <span class="material-icons">
+                                chevron_right
+                            </span>
+                        </button>
+
+                        <button class="pagination-btn active">
+                            ۱
+                        </button>
+
+                        <button class="pagination-btn">
+                            ۲
+                        </button>
+
+                        <button class="pagination-btn">
+                            ۳
+                        </button>
+
+                        <span>...</span>
+
+                        <button class="pagination-btn">
+                            ۱۲۵
+                        </button>
+
+                        <button class="pagination-btn">
+                            <span class="material-icons">
+                                chevron_left
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= JS ================= -->
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/orders.js"></script>
+
+</body>
+
+</html>
