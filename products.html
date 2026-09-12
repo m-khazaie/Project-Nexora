@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>محصولات | داشبورد</title>
+
+    <!-- Vazirmatn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Products CSS -->
+    <link rel="stylesheet" href="assets/css/products.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+                <span class="material-icons">dashboard</span>
+            </div>
+
+            <div>
+                <strong>داشبورد</strong>
+                <small>مدیریت کسب‌وکار</small>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-item">
+                <span class="material-icons">home</span>
+                <span>نمای کلی</span>
+            </a>
+
+            <a href="orders.html" class="nav-item">
+                <span class="material-icons">shopping_cart</span>
+                <span>سفارش‌ها</span>
+            </a>
+
+            <a href="customers.html" class="nav-item">
+                <span class="material-icons">groups</span>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="products.html" class="nav-item active">
+                <span class="material-icons">inventory_2</span>
+                <span>محصولات</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">credit_card</span>
+                <span>تراکنش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">bar_chart</span>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">notifications</span>
+                <span>اعلان‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">settings</span>
+                <span>تنظیمات</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MOBILE OVERLAY ================= -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN ================= -->
+    <div class="main-wrapper">
+
+        <!-- HEADER -->
+        <header class="top-header">
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <div class="header-title">
+                <span>محصولات</span>
+            </div>
+
+            <div class="header-actions">
+
+                <button class="header-icon-btn">
+                    <span class="material-icons">notifications_none</span>
+                </button>
+
+                <div class="header-user">
+                    <div class="header-avatar">م</div>
+
+                    <div class="header-user-info">
+                        <strong>مدیر سیستم</strong>
+                        <small>مدیریت</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+        <main class="page-content">
+
+            <!-- PAGE INTRO -->
+            <section class="products-intro">
+
+                <div>
+                    <span class="page-kicker">
+                        مدیریت فروشگاه
+                    </span>
+
+                    <h1>محصولات</h1>
+
+                    <p>
+                        محصولات فروشگاه خود را مدیریت، بررسی و سازماندهی کنید.
+                    </p>
+                </div>
+
+                <button class="primary-btn" id="addProductBtn">
+                    <span class="material-icons">add</span>
+                    افزودن محصول
+                </button>
+
+            </section>
+
+
+            <!-- ================= STATS ================= -->
+            <section class="product-stats">
+
+                <div class="product-stat-card">
+                    <div class="product-stat-icon">
+                        <span class="material-icons">inventory_2</span>
+                    </div>
+
+                    <div>
+                        <span>کل محصولات</span>
+                        <strong id="totalProducts">۲۴۸</strong>
+                    </div>
+                </div>
+
+
+                <div class="product-stat-card">
+                    <div class="product-stat-icon">
+                        <span class="material-icons">check_circle</span>
+                    </div>
+
+                    <div>
+                        <span>محصولات فعال</span>
+                        <strong id="activeProducts">۲۱۸</strong>
+                    </div>
+                </div>
+
+
+                <div class="product-stat-card">
+                    <div class="product-stat-icon">
+                        <span class="material-icons">warning</span>
+                    </div>
+
+                    <div>
+                        <span>موجودی کم</span>
+                        <strong id="lowStockProducts">۱۸</strong>
+                    </div>
+                </div>
+
+
+                <div class="product-stat-card">
+                    <div class="product-stat-icon">
+                        <span class="material-icons">remove_shopping_cart</span>
+                    </div>
+
+                    <div>
+                        <span>ناموجود</span>
+                        <strong id="outOfStockProducts">۱۲</strong>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ================= PRODUCTS ================= -->
+            <section class="products-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>لیست محصولات</h2>
+                        <p>محصولات فروشگاه را مشاهده و مدیریت کنید.</p>
+                    </div>
+
+                    <button class="secondary-btn" id="exportProductsBtn">
+                        <span class="material-icons">download</span>
+                        خروجی
+                    </button>
+
+                </div>
+
+
+                <!-- TOOLBAR -->
+                <div class="products-toolbar">
+
+                    <div class="product-search">
+
+                        <span class="material-icons">search</span>
+
+                        <input
+                            type="text"
+                            id="productSearch"
+                            placeholder="جستجوی محصول..."
+                        >
+
+                    </div>
+
+
+                    <select id="productCategoryFilter">
+                        <option value="all">همه دسته‌بندی‌ها</option>
+                        <option value="electronics">لوازم دیجیتال</option>
+                        <option value="fashion">پوشاک</option>
+                        <option value="home">خانه</option>
+                        <option value="accessories">اکسسوری</option>
+                    </select>
+
+
+                    <select id="productStockFilter">
+                        <option value="all">همه وضعیت‌ها</option>
+                        <option value="available">موجود</option>
+                        <option value="low">موجودی کم</option>
+                        <option value="out">ناموجود</option>
+                    </select>
+
+
+                    <button class="reset-btn" id="resetProductFilters">
+                        <span class="material-icons">restart_alt</span>
+                        پاک کردن
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+                <div class="products-table-wrapper">
+
+                    <table class="products-table">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="selectAllProducts">
+                                </th>
+
+                                <th>محصول</th>
+                                <th>دسته‌بندی</th>
+                                <th>قیمت</th>
+                                <th>موجودی</th>
+                                <th>وضعیت</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody id="productsTableBody">
+
+                            <tr
+                                data-category="electronics"
+                                data-stock="available"
+                                data-product="لپ‌تاپ حرفه‌ای"
+                            >
+                                <td>
+                                    <input type="checkbox" class="product-checkbox">
+                                </td>
+
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image">
+                                            <span class="material-icons">laptop_mac</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>لپ‌تاپ حرفه‌ای</strong>
+                                            <small>PRD-1001</small>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>لوازم دیجیتال</td>
+
+                                <td>۴۸,۵۰۰,۰۰۰ تومان</td>
+
+                                <td>
+                                    <span class="stock-number">۲۴</span>
+                                </td>
+
+                                <td>
+                                    <span class="product-status status-available">
+                                        موجود
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="product-actions">
+
+                                        <button
+                                            class="table-action view-product"
+                                            title="مشاهده"
+                                        >
+                                            <span class="material-icons">visibility</span>
+                                        </button>
+
+                                        <button
+                                            class="table-action edit-product"
+                                            title="ویرایش"
+                                        >
+                                            <span class="material-icons">edit</span>
+                                        </button>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr
+                                data-category="fashion"
+                                data-stock="low"
+                                data-product="کفش اسپرت"
+                            >
+                                <td>
+                                    <input type="checkbox" class="product-checkbox">
+                                </td>
+
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image">
+                                            <span class="material-icons">directions_run</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>کفش اسپرت</strong>
+                                            <small>PRD-1002</small>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>پوشاک</td>
+
+                                <td>۲,۸۵۰,۰۰۰ تومان</td>
+
+                                <td>
+                                    <span class="stock-number stock-low">۵</span>
+                                </td>
+
+                                <td>
+                                    <span class="product-status status-low">
+                                        موجودی کم
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="product-actions">
+
+                                        <button class="table-action view-product">
+                                            <span class="material-icons">visibility</span>
+                                        </button>
+
+                                        <button class="table-action edit-product">
+                                            <span class="material-icons">edit</span>
+                                        </button>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr
+                                data-category="home"
+                                data-stock="available"
+                                data-product="صندلی اداری"
+                            >
+                                <td>
+                                    <input type="checkbox" class="product-checkbox">
+                                </td>
+
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image">
+                                            <span class="material-icons">chair</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>صندلی اداری</strong>
+                                            <small>PRD-1003</small>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>خانه</td>
+
+                                <td>۶,۲۰۰,۰۰۰ تومان</td>
+
+                                <td>
+                                    <span class="stock-number">۳۸</span>
+                                </td>
+
+                                <td>
+                                    <span class="product-status status-available">
+                                        موجود
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="product-actions">
+                                        <button class="table-action view-product">
+                                            <span class="material-icons">visibility</span>
+                                        </button>
+
+                                        <button class="table-action edit-product">
+                                            <span class="material-icons">edit</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr
+                                data-category="accessories"
+                                data-stock="out"
+                                data-product="ساعت هوشمند"
+                            >
+                                <td>
+                                    <input type="checkbox" class="product-checkbox">
+                                </td>
+
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image">
+                                            <span class="material-icons">watch</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>ساعت هوشمند</strong>
+                                            <small>PRD-1004</small>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>اکسسوری</td>
+
+                                <td>۴,۹۰۰,۰۰۰ تومان</td>
+
+                                <td>
+                                    <span class="stock-number stock-out">۰</span>
+                                </td>
+
+                                <td>
+                                    <span class="product-status status-out">
+                                        ناموجود
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="product-actions">
+                                        <button class="table-action view-product">
+                                            <span class="material-icons">visibility</span>
+                                        </button>
+
+                                        <button class="table-action edit-product">
+                                            <span class="material-icons">edit</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr
+                                data-category="electronics"
+                                data-stock="low"
+                                data-product="هدفون بی‌سیم"
+                            >
+                                <td>
+                                    <input type="checkbox" class="product-checkbox">
+                                </td>
+
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image">
+                                            <span class="material-icons">headphones</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>هدفون بی‌سیم</strong>
+                                            <small>PRD-1005</small>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>لوازم دیجیتال</td>
+
+                                <td>۱,۷۵۰,۰۰۰ تومان</td>
+
+                                <td>
+                                    <span class="stock-number stock-low">۷</span>
+                                </td>
+
+                                <td>
+                                    <span class="product-status status-low">
+                                        موجودی کم
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="product-actions">
+                                        <button class="table-action view-product">
+                                            <span class="material-icons">visibility</span>
+                                        </button>
+
+                                        <button class="table-action edit-product">
+                                            <span class="material-icons">edit</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY -->
+                <div class="products-empty" id="productsEmpty">
+
+                    <span class="material-icons">inventory_2</span>
+
+                    <h3>محصولی پیدا نشد</h3>
+
+                    <p>
+                        با تغییر جستجو یا فیلترها دوباره تلاش کنید.
+                    </p>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+                <div class="products-pagination">
+
+                    <button class="pagination-btn">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+
+                    <button class="pagination-btn active">۱</button>
+                    <button class="pagination-btn">۲</button>
+                    <button class="pagination-btn">۳</button>
+
+                    <button class="pagination-btn">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= MOBILE NAV ================= -->
+    <nav class="mobile-nav">
+
+        <a href="index.html" class="mobile-nav-item">
+            <span class="material-icons">home</span>
+            <small>خانه</small>
+        </a>
+
+        <a href="orders.html" class="mobile-nav-item">
+            <span class="material-icons">shopping_cart</span>
+            <small>سفارش‌ها</small>
+        </a>
+
+        <a href="customers.html" class="mobile-nav-item">
+            <span class="material-icons">groups</span>
+            <small>مشتریان</small>
+        </a>
+
+        <a href="products.html" class="mobile-nav-item active">
+            <span class="material-icons">inventory_2</span>
+            <small>محصولات</small>
+        </a>
+
+        <a href="#" class="mobile-nav-item">
+            <span class="material-icons">settings</span>
+            <small>تنظیمات</small>
+        </a>
+
+    </nav>
+
+
+    <!-- Main JS -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Products JS -->
+    <script src="assets/js/products.js"></script>
+
+</body>
+</html>
