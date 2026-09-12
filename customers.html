@@ -1,0 +1,1318 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>مشتریان | داشبورد مدیریت</title>
+
+
+    <!-- Persian Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Material Icons -->
+
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/index.css"
+    >
+
+
+    <!-- Customers CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/customers.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================= -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <div class="sidebar-header">
+
+            <div class="brand">
+
+                <span class="material-icons">
+                    dashboard
+                </span>
+
+                <span>
+                    داشبورد
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <!-- Overview -->
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    home
+                </span>
+
+                <span>
+                    نمای کلی
+                </span>
+
+            </a>
+
+
+            <!-- Orders -->
+
+            <a
+                href="orders.html"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    shopping_cart
+                </span>
+
+                <span>
+                    سفارش‌ها
+                </span>
+
+            </a>
+
+
+            <!-- Customers -->
+
+            <a
+                href="customers.html"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    groups
+                </span>
+
+                <span>
+                    مشتریان
+                </span>
+
+            </a>
+
+
+            <!-- Products -->
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    inventory_2
+                </span>
+
+                <span>
+                    محصولات
+                </span>
+
+            </a>
+
+
+            <!-- Transactions -->
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    payments
+                </span>
+
+                <span>
+                    تراکنش‌ها
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    analytics
+                </span>
+
+                <span>
+                    گزارش‌ها
+                </span>
+
+            </a>
+
+
+            <!-- Notifications -->
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    notifications
+                </span>
+
+                <span>
+                    اعلان‌ها
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="material-icons">
+                    settings
+                </span>
+
+                <span>
+                    تنظیمات
+                </span>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         SIDEBAR OVERLAY
+    ========================================= -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="top-header">
+
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+            >
+
+                <span class="material-icons">
+                    menu
+                </span>
+
+            </button>
+
+
+            <div class="header-title">
+
+                <span>
+                    مشتریان
+                </span>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="header-icon-btn"
+                    type="button"
+                >
+
+                    <span class="material-icons">
+                        notifications
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             PAGE CONTENT
+        ====================================== -->
+
+        <section class="customers-page">
+
+
+            <!-- Page Intro -->
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        مدیریت مشتریان
+                    </span>
+
+                    <h1>
+                        مشتریان
+                    </h1>
+
+                    <p>
+                        مشتریان فروشگاه را مدیریت و اطلاعات آن‌ها را بررسی کنید.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="addCustomerBtn"
+                    type="button"
+                >
+
+                    <span class="material-icons">
+                        person_add
+                    </span>
+
+                    <span>
+                        افزودن مشتری
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================
+                 CUSTOMER STATS
+            ================================== -->
+
+            <div class="customer-stats">
+
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon">
+
+                        <span class="material-icons">
+                            groups
+                        </span>
+
+                    </div>
+
+                    <div class="customer-stat-content">
+
+                        <span>
+                            کل مشتریان
+                        </span>
+
+                        <strong class="stat-value">
+                            ۱,۲۸۴
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon">
+
+                        <span class="material-icons">
+                            person_add
+                        </span>
+
+                    </div>
+
+                    <div class="customer-stat-content">
+
+                        <span>
+                            مشتریان جدید
+                        </span>
+
+                        <strong class="stat-value">
+                            ۱۲۸
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon">
+
+                        <span class="material-icons">
+                            person_check
+                        </span>
+
+                    </div>
+
+                    <div class="customer-stat-content">
+
+                        <span>
+                            مشتریان فعال
+                        </span>
+
+                        <strong class="stat-value">
+                            ۹۴۶
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon">
+
+                        <span class="material-icons">
+                            shopping_bag
+                        </span>
+
+                    </div>
+
+                    <div class="customer-stat-content">
+
+                        <span>
+                            خرید این ماه
+                        </span>
+
+                        <strong class="stat-value">
+                            ۳۶۸
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 CUSTOMER SECTION
+            ================================== -->
+
+            <section class="customers-section">
+
+
+                <!-- Section Header -->
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            لیست مشتریان
+                        </h2>
+
+                        <p>
+                            فهرست مشتریان و وضعیت فعالیت آن‌ها
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     FILTER BAR
+                ================================== -->
+
+                <div class="customer-toolbar">
+
+
+                    <!-- Search -->
+
+                    <div class="customer-search">
+
+                        <span class="material-icons">
+                            search
+                        </span>
+
+                        <input
+                            type="search"
+                            id="customerSearch"
+                            placeholder="جستجوی نام، ایمیل یا شماره تماس..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- Status Filter -->
+
+                    <div class="customer-filter">
+
+                        <span class="material-icons">
+                            filter_list
+                        </span>
+
+                        <select id="customerStatusFilter">
+
+                            <option value="all">
+                                همه مشتریان
+                            </option>
+
+                            <option value="active">
+                                فعال
+                            </option>
+
+                            <option value="inactive">
+                                غیرفعال
+                            </option>
+
+                            <option value="new">
+                                جدید
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Reset -->
+
+                    <button
+                        class="secondary-btn"
+                        id="resetCustomerFilter"
+                        type="button"
+                    >
+
+                        <span class="material-icons">
+                            refresh
+                        </span>
+
+                        <span>
+                            پاک کردن فیلتر
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================
+                     CUSTOMER TABLE
+                ================================== -->
+
+                <div class="customers-table-wrapper">
+
+                    <table class="customers-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    مشتری
+                                </th>
+
+                                <th>
+                                    شماره تماس
+                                </th>
+
+                                <th>
+                                    تعداد سفارش
+                                </th>
+
+                                <th>
+                                    مجموع خرید
+                                </th>
+
+                                <th>
+                                    آخرین فعالیت
+                                </th>
+
+                                <th>
+                                    وضعیت
+                                </th>
+
+                                <th>
+                                    عملیات
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="customersTableBody">
+
+
+                            <!-- Customer 1 -->
+
+                            <tr
+                                data-status="active"
+                                data-customer="علی رضایی"
+                            >
+
+                                <td>
+
+                                    <div class="customer-info">
+
+                                        <div class="customer-avatar">
+                                            ع
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                علی رضایی
+                                            </strong>
+
+                                            <span>
+                                                ali@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ۰۹۱۲۱۲۳۴۵۶۷
+                                </td>
+
+
+                                <td>
+                                    ۲۴ سفارش
+                                </td>
+
+
+                                <td>
+                                    ۱۸,۵۰۰,۰۰۰ تومان
+                                </td>
+
+
+                                <td>
+                                    امروز
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge active">
+                                        فعال
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="table-action-btn view-customer"
+                                            type="button"
+                                            title="مشاهده"
+                                        >
+
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+
+                                        </button>
+
+                                        <button
+                                            class="table-action-btn edit-customer"
+                                            type="button"
+                                            title="ویرایش"
+                                        >
+
+                                            <span class="material-icons">
+                                                edit
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Customer 2 -->
+
+                            <tr
+                                data-status="new"
+                                data-customer="سارا محمدی"
+                            >
+
+                                <td>
+
+                                    <div class="customer-info">
+
+                                        <div class="customer-avatar">
+                                            س
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                سارا محمدی
+                                            </strong>
+
+                                            <span>
+                                                sara@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ۰۹۳۵۷۶۵۴۳۲۱
+                                </td>
+
+
+                                <td>
+                                    ۸ سفارش
+                                </td>
+
+
+                                <td>
+                                    ۶,۸۰۰,۰۰۰ تومان
+                                </td>
+
+
+                                <td>
+                                    دیروز
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge new">
+                                        جدید
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="table-action-btn view-customer"
+                                            type="button"
+                                            title="مشاهده"
+                                        >
+
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+
+                                        </button>
+
+                                        <button
+                                            class="table-action-btn edit-customer"
+                                            type="button"
+                                            title="ویرایش"
+                                        >
+
+                                            <span class="material-icons">
+                                                edit
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Customer 3 -->
+
+                            <tr
+                                data-status="active"
+                                data-customer="محمد کریمی"
+                            >
+
+                                <td>
+
+                                    <div class="customer-info">
+
+                                        <div class="customer-avatar">
+                                            م
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                محمد کریمی
+                                            </strong>
+
+                                            <span>
+                                                mohammad@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ۰۹۱۹۸۷۶۵۴۳۲
+                                </td>
+
+
+                                <td>
+                                    ۳۱ سفارش
+                                </td>
+
+
+                                <td>
+                                    ۲۷,۳۰۰,۰۰۰ تومان
+                                </td>
+
+
+                                <td>
+                                    ۲ روز پیش
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge active">
+                                        فعال
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="table-action-btn view-customer"
+                                            type="button"
+                                            title="مشاهده"
+                                        >
+
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+
+                                        </button>
+
+                                        <button
+                                            class="table-action-btn edit-customer"
+                                            type="button"
+                                            title="ویرایش"
+                                        >
+
+                                            <span class="material-icons">
+                                                edit
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Customer 4 -->
+
+                            <tr
+                                data-status="inactive"
+                                data-customer="نگار احمدی"
+                            >
+
+                                <td>
+
+                                    <div class="customer-info">
+
+                                        <div class="customer-avatar">
+                                            ن
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                نگار احمدی
+                                            </strong>
+
+                                            <span>
+                                                negar@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ۰۹۱۰۴۵۶۷۸۹۱
+                                </td>
+
+
+                                <td>
+                                    ۵ سفارش
+                                </td>
+
+
+                                <td>
+                                    ۲,۴۰۰,۰۰۰ تومان
+                                </td>
+
+
+                                <td>
+                                    ۳ ماه پیش
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge inactive">
+                                        غیرفعال
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="table-action-btn view-customer"
+                                            type="button"
+                                            title="مشاهده"
+                                        >
+
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+
+                                        </button>
+
+                                        <button
+                                            class="table-action-btn edit-customer"
+                                            type="button"
+                                            title="ویرایش"
+                                        >
+
+                                            <span class="material-icons">
+                                                edit
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Customer 5 -->
+
+                            <tr
+                                data-status="active"
+                                data-customer="رضا موسوی"
+                            >
+
+                                <td>
+
+                                    <div class="customer-info">
+
+                                        <div class="customer-avatar">
+                                            ر
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                رضا موسوی
+                                            </strong>
+
+                                            <span>
+                                                reza@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ۰۹۱۳۳۴۵۶۷۸۹
+                                </td>
+
+
+                                <td>
+                                    ۱۷ سفارش
+                                </td>
+
+
+                                <td>
+                                    ۱۲,۷۵۰,۰۰۰ تومان
+                                </td>
+
+
+                                <td>
+                                    امروز
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge active">
+                                        فعال
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <button
+                                            class="table-action-btn view-customer"
+                                            type="button"
+                                            title="مشاهده"
+                                        >
+
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+
+                                        </button>
+
+                                        <button
+                                            class="table-action-btn edit-customer"
+                                            type="button"
+                                            title="ویرایش"
+                                        >
+
+                                            <span class="material-icons">
+                                                edit
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- =================================
+                     EMPTY STATE
+                ================================== -->
+
+                <div
+                    class="customers-empty"
+                    id="customersEmpty"
+                >
+
+                    <span class="material-icons">
+                        person_search
+                    </span>
+
+                    <h3>
+                        مشتری‌ای پیدا نشد
+                    </h3>
+
+                    <p>
+                        عبارت جستجو یا فیلتر انتخابی را تغییر دهید.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================
+                     PAGINATION
+                ================================== -->
+
+                <div class="customers-pagination">
+
+                    <span class="pagination-info">
+                        نمایش ۱ تا ۵ از ۱,۲۸۴ مشتری
+                    </span>
+
+
+                    <div class="pagination-buttons">
+
+                        <button
+                            type="button"
+                            class="pagination-btn"
+                            disabled
+                        >
+
+                            <span class="material-icons">
+                                chevron_right
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="pagination-btn active"
+                        >
+                            ۱
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="pagination-btn"
+                        >
+                            ۲
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="pagination-btn"
+                        >
+                            ۳
+                        </button>
+
+
+                        <span class="pagination-dots">
+                            ...
+                        </span>
+
+
+                        <button
+                            type="button"
+                            class="pagination-btn"
+                        >
+                            ۲۵۷
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="pagination-btn"
+                        >
+
+                            <span class="material-icons">
+                                chevron_left
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         MOBILE NAVIGATION
+    ========================================= -->
+
+    <nav class="mobile-nav">
+
+
+        <a
+            href="index.html"
+            class="mobile-nav-item"
+        >
+
+            <span class="material-icons">
+                home
+            </span>
+
+            <span>
+                خانه
+            </span>
+
+        </a>
+
+
+        <a
+            href="orders.html"
+            class="mobile-nav-item"
+        >
+
+            <span class="material-icons">
+                shopping_cart
+            </span>
+
+            <span>
+                سفارش‌ها
+            </span>
+
+        </a>
+
+
+        <button
+            class="mobile-nav-item mobile-add"
+            type="button"
+        >
+
+            <span class="material-icons">
+                add
+            </span>
+
+        </button>
+
+
+        <a
+            href="customers.html"
+            class="mobile-nav-item active"
+        >
+
+            <span class="material-icons">
+                groups
+            </span>
+
+            <span>
+                مشتریان
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="mobile-nav-item"
+        >
+
+            <span class="material-icons">
+                settings
+            </span>
+
+            <span>
+                تنظیمات
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         APP JS
+    ========================================= -->
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
+
