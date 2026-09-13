@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تراکنش‌ها | داشبورد</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/index.css">
+
+    <!-- Transactions CSS -->
+    <link rel="stylesheet" href="../assets/css/transactions.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <span class="material-icons">dashboard</span>
+            </div>
+
+            <div>
+                <strong>داشبورد</strong>
+                <small>مدیریت کسب‌وکار</small>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-item">
+                <span class="material-icons">home</span>
+                <span>نمای کلی</span>
+            </a>
+
+            <a href="orders.html" class="nav-item">
+                <span class="material-icons">shopping_cart</span>
+                <span>سفارش‌ها</span>
+            </a>
+
+            <a href="customers.html" class="nav-item">
+                <span class="material-icons">groups</span>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="products.html" class="nav-item">
+                <span class="material-icons">inventory_2</span>
+                <span>محصولات</span>
+            </a>
+
+            <a href="transactions.html" class="nav-item active">
+                <span class="material-icons">credit_card</span>
+                <span>تراکنش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">bar_chart</span>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">notifications</span>
+                <span>اعلان‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons">settings</span>
+                <span>تنظیمات</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Overlay -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="app-shell">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                <span class="material-icons">menu</span>
+            </button>
+
+
+            <div class="header-title">
+                <span>تراکنش‌ها</span>
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="header-icon-btn">
+                    <span class="material-icons">
+                        notifications_none
+                    </span>
+                </button>
+
+
+                <div class="header-user">
+
+                    <div class="header-avatar">
+                        م
+                    </div>
+
+                    <div class="header-user-info">
+                        <strong>مدیر سیستم</strong>
+                        <small>مدیریت</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <main class="page-content">
+
+            <!-- INTRO -->
+
+            <section class="transactions-intro">
+
+                <div>
+
+                    <span class="page-kicker">
+                        مدیریت مالی
+                    </span>
+
+                    <h1>
+                        تراکنش‌ها
+                    </h1>
+
+                    <p>
+                        تمام پرداخت‌ها و تراکنش‌های فروشگاه را مدیریت و بررسی کنید.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="transaction-stats">
+
+                <div class="transaction-stat-card">
+
+                    <div class="transaction-stat-icon">
+                        <span class="material-icons">
+                            payments
+                        </span>
+                    </div>
+
+                    <div>
+                        <span>مجموع تراکنش‌ها</span>
+                        <strong>۱,۸۴۲</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="transaction-stat-card">
+
+                    <div class="transaction-stat-icon">
+                        <span class="material-icons">
+                            check_circle
+                        </span>
+                    </div>
+
+                    <div>
+                        <span>موفق</span>
+                        <strong>۱,۶۷۸</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="transaction-stat-card">
+
+                    <div class="transaction-stat-icon">
+                        <span class="material-icons">
+                            schedule
+                        </span>
+                    </div>
+
+                    <div>
+                        <span>در انتظار</span>
+                        <strong>۹۶</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="transaction-stat-card">
+
+                    <div class="transaction-stat-icon">
+                        <span class="material-icons">
+                            replay
+                        </span>
+                    </div>
+
+                    <div>
+                        <span>بازپرداخت</span>
+                        <strong>۶۸</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TRANSACTIONS ================= -->
+
+            <section class="transactions-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>
+                            لیست تراکنش‌ها
+                        </h2>
+
+                        <p>
+                            آخرین تراکنش‌های ثبت‌شده در فروشگاه
+                        </p>
+                    </div>
+
+                    <button
+                        class="secondary-btn"
+                        id="exportTransactionsBtn"
+                    >
+                        <span class="material-icons">
+                            download
+                        </span>
+
+                        خروجی
+                    </button>
+
+                </div>
+
+
+                <!-- TOOLBAR -->
+
+                <div class="transactions-toolbar">
+
+                    <div class="transaction-search">
+
+                        <span class="material-icons">
+                            search
+                        </span>
+
+                        <input
+                            type="text"
+                            id="transactionSearch"
+                            placeholder="جستجوی تراکنش، مشتری یا شماره سفارش..."
+                        >
+
+                    </div>
+
+
+                    <select id="transactionStatusFilter">
+
+                        <option value="all">
+                            همه وضعیت‌ها
+                        </option>
+
+                        <option value="success">
+                            موفق
+                        </option>
+
+                        <option value="failed">
+                            ناموفق
+                        </option>
+
+                        <option value="pending">
+                            در انتظار
+                        </option>
+
+                        <option value="refunded">
+                            بازپرداخت
+                        </option>
+
+                    </select>
+
+
+                    <select id="transactionMethodFilter">
+
+                        <option value="all">
+                            همه روش‌ها
+                        </option>
+
+                        <option value="card">
+                            کارت بانکی
+                        </option>
+
+                        <option value="online">
+                            پرداخت آنلاین
+                        </option>
+
+                        <option value="wallet">
+                            کیف پول
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        class="reset-btn"
+                        id="resetTransactionFilters"
+                    >
+
+                        <span class="material-icons">
+                            restart_alt
+                        </span>
+
+                        پاک کردن
+
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="transactions-table-wrapper">
+
+                    <table class="transactions-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    <input
+                                        type="checkbox"
+                                        id="selectAllTransactions"
+                                    >
+                                </th>
+
+                                <th>
+                                    تراکنش
+                                </th>
+
+                                <th>
+                                    مشتری
+                                </th>
+
+                                <th>
+                                    مبلغ
+                                </th>
+
+                                <th>
+                                    روش پرداخت
+                                </th>
+
+                                <th>
+                                    تاریخ
+                                </th>
+
+                                <th>
+                                    وضعیت
+                                </th>
+
+                                <th>
+                                    عملیات
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="transactionsTableBody">
+
+
+                            <!-- TRANSACTION 1 -->
+
+                            <tr
+                                data-status="success"
+                                data-method="card"
+                                data-search="TRX-2026-001 محمد رضایی ORD-1048"
+                            >
+
+                                <td>
+                                    <input
+                                        type="checkbox"
+                                        class="transaction-checkbox"
+                                    >
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-info">
+
+                                        <div class="transaction-icon">
+                                            <span class="material-icons">
+                                                payments
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <strong>
+                                                TRX-2026-001
+                                            </strong>
+
+                                            <small>
+                                                ORD-1048
+                                            </small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    محمد رضایی
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        ۲,۸۵۰,۰۰۰ تومان
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    کارت بانکی
+                                </td>
+
+
+                                <td>
+                                    ۱۴۰۵/۰۶/۲۲
+                                    <small class="transaction-time">
+                                        ۱۰:۴۲
+                                    </small>
+                                </td>
+
+
+                                <td>
+                                    <span class="transaction-status status-success">
+                                        موفق
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-actions">
+
+                                        <button
+                                            class="table-action view-transaction"
+                                            title="مشاهده"
+                                        >
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- TRANSACTION 2 -->
+
+                            <tr
+                                data-status="success"
+                                data-method="online"
+                                data-search="TRX-2026-002 سارا احمدی ORD-1047"
+                            >
+
+                                <td>
+                                    <input
+                                        type="checkbox"
+                                        class="transaction-checkbox"
+                                    >
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-info">
+
+                                        <div class="transaction-icon">
+                                            <span class="material-icons">
+                                                language
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <strong>
+                                                TRX-2026-002
+                                            </strong>
+
+                                            <small>
+                                                ORD-1047
+                                            </small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    سارا احمدی
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        ۱,۴۵۰,۰۰۰ تومان
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    پرداخت آنلاین
+                                </td>
+
+
+                                <td>
+                                    ۱۴۰۵/۰۶/۲۲
+                                    <small class="transaction-time">
+                                        ۰۹:۱۸
+                                    </small>
+                                </td>
+
+
+                                <td>
+                                    <span class="transaction-status status-success">
+                                        موفق
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-actions">
+
+                                        <button
+                                            class="table-action view-transaction"
+                                        >
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- TRANSACTION 3 -->
+
+                            <tr
+                                data-status="pending"
+                                data-method="wallet"
+                                data-search="TRX-2026-003 علی کریمی ORD-1046"
+                            >
+
+                                <td>
+                                    <input
+                                        type="checkbox"
+                                        class="transaction-checkbox"
+                                    >
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-info">
+
+                                        <div class="transaction-icon">
+                                            <span class="material-icons">
+                                                account_balance_wallet
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <strong>
+                                                TRX-2026-003
+                                            </strong>
+
+                                            <small>
+                                                ORD-1046
+                                            </small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    علی کریمی
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        ۷۸۰,۰۰۰ تومان
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    کیف پول
+                                </td>
+
+
+                                <td>
+                                    ۱۴۰۵/۰۶/۲۱
+                                    <small class="transaction-time">
+                                        ۱۸:۳۵
+                                    </small>
+                                </td>
+
+
+                                <td>
+                                    <span class="transaction-status status-pending">
+                                        در انتظار
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-actions">
+
+                                        <button
+                                            class="table-action view-transaction"
+                                        >
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- TRANSACTION 4 -->
+
+                            <tr
+                                data-status="failed"
+                                data-method="card"
+                                data-search="TRX-2026-004 نگار محمدی ORD-1045"
+                            >
+
+                                <td>
+                                    <input
+                                        type="checkbox"
+                                        class="transaction-checkbox"
+                                    >
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-info">
+
+                                        <div class="transaction-icon">
+                                            <span class="material-icons">
+                                                credit_card
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <strong>
+                                                TRX-2026-004
+                                            </strong>
+
+                                            <small>
+                                                ORD-1045
+                                            </small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    نگار محمدی
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        ۳,۲۰۰,۰۰۰ تومان
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    کارت بانکی
+                                </td>
+
+
+                                <td>
+                                    ۱۴۰۵/۰۶/۲۱
+                                    <small class="transaction-time">
+                                        ۱۵:۲۲
+                                    </small>
+                                </td>
+
+
+                                <td>
+                                    <span class="transaction-status status-failed">
+                                        ناموفق
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-actions">
+
+                                        <button
+                                            class="table-action view-transaction"
+                                        >
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- TRANSACTION 5 -->
+
+                            <tr
+                                data-status="refunded"
+                                data-method="online"
+                                data-search="TRX-2026-005 رضا اکبری ORD-1044"
+                            >
+
+                                <td>
+                                    <input
+                                        type="checkbox"
+                                        class="transaction-checkbox"
+                                    >
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-info">
+
+                                        <div class="transaction-icon">
+                                            <span class="material-icons">
+                                                replay
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <strong>
+                                                TRX-2026-005
+                                            </strong>
+
+                                            <small>
+                                                ORD-1044
+                                            </small>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    رضا اکبری
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        ۱,۹۸۰,۰۰۰ تومان
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    پرداخت آنلاین
+                                </td>
+
+
+                                <td>
+                                    ۱۴۰۵/۰۶/۲۰
+                                    <small class="transaction-time">
+                                        ۱۲:۰۶
+                                    </small>
+                                </td>
+
+
+                                <td>
+                                    <span class="transaction-status status-refunded">
+                                        بازپرداخت
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="transaction-actions">
+
+                                        <button
+                                            class="table-action view-transaction"
+                                        >
+                                            <span class="material-icons">
+                                                visibility
+                                            </span>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="transactions-empty"
+                    id="transactionsEmpty"
+                >
+
+                    <span class="material-icons">
+                        receipt_long
+                    </span>
+
+                    <h3>
+                        تراکنشی پیدا نشد
+                    </h3>
+
+                    <p>
+                        جستجو یا فیلترهای انتخاب‌شده نتیجه‌ای ندارند.
+                    </p>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="transactions-pagination">
+
+                    <button class="pagination-btn">
+
+                        <span class="material-icons">
+                            chevron_right
+                        </span>
+
+                    </button>
+
+
+                    <button class="pagination-btn active">
+                        ۱
+                    </button>
+
+                    <button class="pagination-btn">
+                        ۲
+                    </button>
+
+                    <button class="pagination-btn">
+                        ۳
+                    </button>
+
+
+                    <button class="pagination-btn">
+
+                        <span class="material-icons">
+                            chevron_left
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= MOBILE NAV ================= -->
+
+    <nav class="mobile-nav">
+
+        <a
+            href="../index.html"
+            class="mobile-nav-item"
+        >
+            <span class="material-icons">
+                home
+            </span>
+
+            <small>
+                خانه
+            </small>
+        </a>
+
+
+        <a
+            href="orders.html"
+            class="mobile-nav-item"
+        >
+            <span class="material-icons">
+                shopping_cart
+            </span>
+
+            <small>
+                سفارش‌ها
+            </small>
+        </a>
+
+
+        <a
+            href="customers.html"
+            class="mobile-nav-item"
+        >
+            <span class="material-icons">
+                groups
+            </span>
+
+            <small>
+                مشتریان
+            </small>
+        </a>
+
+
+        <a
+            href="products.html"
+            class="mobile-nav-item"
+        >
+            <span class="material-icons">
+                inventory_2
+            </span>
+
+            <small>
+                محصولات
+            </small>
+        </a>
+
+
+        <a
+            href="transactions.html"
+            class="mobile-nav-item active"
+        >
+            <span class="material-icons">
+                credit_card
+            </span>
+
+            <small>
+                تراکنش‌ها
+            </small>
+        </a>
+
+    </nav>
+
+
+    <!-- Main JS -->
+
+    <script src="../assets/js/app.js"></script>
+
+    <!-- Transactions JS -->
+
+    <script src="../assets/js/transactions.js"></script>
+
+</body>
+</html>

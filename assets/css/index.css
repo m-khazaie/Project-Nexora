@@ -772,6 +772,16 @@ a {
         --sidebar-width: 235px;
     }
 
+    .main-content {
+    width: calc(100% - var(--sidebar-width));
+    margin-right: var(--sidebar-width);
+}
+
+.app-shell .main-content {
+    width: 100%;
+    margin-right: 0;
+}
+
     .header {
         padding: 0 24px;
     }
@@ -853,6 +863,16 @@ a {
 
         padding-bottom: 74px;
     }
+
+    .main-content {
+    width: 100%;
+    margin-right: 0;
+}
+
+.app-shell .main-content {
+    width: 100%;
+    margin-right: 0;
+}
 
 
     /* Header */
@@ -1674,24 +1694,19 @@ a {
 
 
 /* =========================================
-   FIX SIDEBAR + MAIN CONTENT
+   FIX PAGE LAYOUT
 ========================================= */
 
-.app-shell {
-    margin-right: 280px;
-    width: auto;
-    min-width: 0;
-}
-
 .main-content {
-    width: 100%;
+    width: calc(100% - var(--sidebar-width));
+    margin-right: var(--sidebar-width);
     min-width: 0;
     box-sizing: border-box;
 }
 
-/* جلوگیری از بیرون زدن محتوای صفحه */
-body {
-    overflow-x: hidden;
+.app-shell .main-content {
+    width: 100%;
+    margin-right: 0;
 }
 
 
