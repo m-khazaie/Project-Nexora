@@ -1693,20 +1693,166 @@ a {
 }
 
 
+
 /* =========================================
-   FIX PAGE LAYOUT
+   GLOBAL PAGE LAYOUT FIX
+   Nexora - Sidebar / Content System
 ========================================= */
 
-.main-content {
-    width: calc(100% - var(--sidebar-width));
+/*
+   تمام صفحات داشبورد باید در دسکتاپ
+   فضای سایدبار را در نظر بگیرند.
+*/
+
+.main {
+    width: auto;
+    min-width: 0;
     margin-right: var(--sidebar-width);
+    box-sizing: border-box;
+}
+
+
+/*
+   صفحات مستقیمی که main-content دارند
+   مثل:
+   Customers
+   Notifications
+   Settings
+   Reports
+*/
+
+.main-content {
+    width: auto;
+    min-width: 0;
+    margin-right: var(--sidebar-width);
+    box-sizing: border-box;
+}
+
+
+/*
+   صفحات Orders / Transactions
+   که داخل app-shell قرار دارند.
+*/
+
+.app-shell {
+    width: auto;
+    min-width: 0;
+    margin-right: var(--sidebar-width);
+    box-sizing: border-box;
+}
+
+
+/*
+   main-content داخل app-shell
+   نباید دوباره فضای سایدبار بگیرد.
+*/
+
+.app-shell .main-content {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+   صفحه Products
+   که از main-wrapper استفاده می‌کند.
+*/
+
+.main-wrapper {
+    width: auto;
+    min-width: 0;
+    margin-right: var(--sidebar-width);
+    box-sizing: border-box;
+}
+
+
+/*
+   محتوای داخلی Products / Transactions
+*/
+
+.main-wrapper .page-content,
+.app-shell .page-content {
+    width: 100%;
     min-width: 0;
     box-sizing: border-box;
 }
 
-.app-shell .main-content {
+
+/*
+   جلوگیری از بزرگ شدن عناصر داخلی
+   و بیرون زدن آنها از محدوده صفحه
+*/
+
+.main-content,
+.main-wrapper,
+.app-shell,
+.page-content,
+.content {
+    max-width: 100%;
+}
+
+
+/*
+   جدول‌ها باید داخل wrapper خودشان
+   اسکرول افقی داشته باشند.
+*/
+
+.orders-table-wrapper,
+.products-table-wrapper,
+.transactions-table-wrapper,
+.customers-table-wrapper,
+.report-table-wrapper {
     width: 100%;
-    margin-right: 0;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+
+/*
+   جلوگیری از کوچک شدن اجباری جدول
+   در صفحات دسکتاپ و موبایل.
+*/
+
+.orders-table,
+.products-table,
+.transactions-table,
+.customers-table,
+.report-table {
+    max-width: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    :root {
+        --sidebar-width: 235px;
+    }
+
+    .main {
+        margin-right: var(--sidebar-width);
+    }
+
+    .main-content {
+        margin-right: var(--sidebar-width);
+    }
+
+    .app-shell {
+        margin-right: var(--sidebar-width);
+    }
+
+    .main-wrapper {
+        margin-right: var(--sidebar-width);
+    }
+
 }
 
 
@@ -1716,12 +1862,94 @@ a {
 
 @media (max-width: 760px) {
 
-    .app-shell {
-        margin-right: 0;
+    /*
+       سایدبار در موبایل از صفحه خارج می‌شود.
+       بنابراین هیچ فضای خالی برای آن باقی نمی‌ماند.
+    */
+
+    .main,
+    .main-content,
+    .app-shell,
+    .main-wrapper {
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin-right: 0;
+    }
+
+
+    /*
+       محتوای صفحات هم باید کل عرض موبایل را بگیرد.
+    */
+
+    .app-shell .main-content,
+    .main-wrapper .page-content,
+    .app-shell .page-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin-right: 0;
+    }
+
+
+    /*
+       جلوگیری از ایجاد عرض اضافه توسط محتوا
+    */
+
+    .content,
+    .page-content,
+    .customers-page,
+    .notifications-page,
+    .reports-page,
+    .settings-page {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+
+    /*
+       جدول‌ها روی موبایل داخل محدوده خودشان
+       اسکرول افقی می‌خورند.
+    */
+
+    .orders-table-wrapper,
+    .products-table-wrapper,
+    .transactions-table-wrapper,
+    .customers-table-wrapper,
+    .report-table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
     }
 
 }
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .main,
+    .main-content,
+    .app-shell,
+    .main-wrapper {
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
+
+
 
 
 

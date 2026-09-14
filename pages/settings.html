@@ -1,0 +1,897 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تنظیمات | داشبورد مدیریت</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/index.css">
+
+    <!-- Settings CSS -->
+    <link rel="stylesheet" href="../assets/css/settings.css">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+
+    <!-- Vazirmatn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ==============================
+         SIDEBAR
+    =============================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo">
+                <span class="material-icons-round">
+                    dashboard
+                </span>
+
+                <span>
+                    مدیریت‌یار
+                </span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-item">
+                <span class="material-icons-round">
+                    dashboard
+                </span>
+                <span>نمای کلی</span>
+            </a>
+
+            <a href="orders.html" class="nav-item">
+                <span class="material-icons-round">
+                    shopping_cart
+                </span>
+                <span>سفارش‌ها</span>
+            </a>
+
+            <a href="customers.html" class="nav-item">
+                <span class="material-icons-round">
+                    groups
+                </span>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="products.html" class="nav-item">
+                <span class="material-icons-round">
+                    inventory_2
+                </span>
+                <span>محصولات</span>
+            </a>
+
+            <a href="transactions.html" class="nav-item">
+                <span class="material-icons-round">
+                    payments
+                </span>
+                <span>تراکنش‌ها</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span class="material-icons-round">
+                    bar_chart
+                </span>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <span class="material-icons-round">
+                    notifications
+                </span>
+                <span>اعلان‌ها</span>
+            </a>
+
+            <a href="settings.html" class="nav-item active">
+                <span class="material-icons-round">
+                    settings
+                </span>
+                <span>تنظیمات</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Overlay -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- Mobile Menu -->
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+        <span class="material-icons-round">
+            menu
+        </span>
+
+    </button>
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="main-content settings-page">
+
+
+        <!-- PAGE HEADER -->
+
+        <header class="settings-header">
+
+            <div>
+
+                <span class="page-label">
+                    مدیریت سیستم
+                </span>
+
+                <h1>
+                    تنظیمات
+                </h1>
+
+                <p>
+                    تنظیمات فروشگاه و نحوه عملکرد سیستم را مدیریت کنید.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==============================
+             SETTINGS LAYOUT
+        =============================== -->
+
+        <div class="settings-layout">
+
+
+            <!-- SETTINGS MENU -->
+
+            <aside class="settings-menu">
+
+                <button class="settings-tab active"
+                    data-section="store">
+
+                    <span class="material-icons-round">
+                        store
+                    </span>
+
+                    <span>
+                        اطلاعات فروشگاه
+                    </span>
+
+                </button>
+
+
+                <button class="settings-tab"
+                    data-section="orders">
+
+                    <span class="material-icons-round">
+                        shopping_bag
+                    </span>
+
+                    <span>
+                        سفارش‌ها
+                    </span>
+
+                </button>
+
+
+                <button class="settings-tab"
+                    data-section="notifications">
+
+                    <span class="material-icons-round">
+                        notifications
+                    </span>
+
+                    <span>
+                        اعلان‌ها
+                    </span>
+
+                </button>
+
+
+                <button class="settings-tab"
+                    data-section="display">
+
+                    <span class="material-icons-round">
+                        tune
+                    </span>
+
+                    <span>
+                        نمایش
+                    </span>
+
+                </button>
+
+            </aside>
+
+
+            <!-- SETTINGS CONTENT -->
+
+            <section class="settings-content">
+
+
+                <!-- ==============================
+                     STORE
+                =============================== -->
+
+                <div class="settings-section active"
+                    id="store">
+
+                    <div class="section-title">
+
+                        <div class="section-icon">
+                            <span class="material-icons-round">
+                                store
+                            </span>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                اطلاعات فروشگاه
+                            </h2>
+
+                            <p>
+                                اطلاعات اصلی فروشگاه خود را مدیریت کنید.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                نام فروشگاه
+                            </label>
+
+                            <input
+                                type="text"
+                                id="storeName"
+                                value="مدیریت‌یار">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                ایمیل فروشگاه
+                            </label>
+
+                            <input
+                                type="email"
+                                id="storeEmail"
+                                value="info@example.com">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                شماره تماس
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="storePhone"
+                                value="021-12345678">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                واحد پول
+                            </label>
+
+                            <select id="currency">
+
+                                <option value="toman">
+                                    تومان
+                                </option>
+
+                                <option value="rial">
+                                    ریال
+                                </option>
+
+                                <option value="usd">
+                                    دلار
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label>
+                                آدرس فروشگاه
+                            </label>
+
+                            <textarea
+                                id="storeAddress"
+                                rows="4">تهران، خیابان ولیعصر، پلاک ۱۲۴</textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     ORDERS
+                =============================== -->
+
+                <div class="settings-section"
+                    id="orders">
+
+                    <div class="section-title">
+
+                        <div class="section-icon">
+
+                            <span class="material-icons-round">
+                                shopping_bag
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                تنظیمات سفارش‌ها
+                            </h2>
+
+                            <p>
+                                نحوه مدیریت و پردازش سفارش‌ها را مشخص کنید.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-list">
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    تأیید خودکار سفارش
+                                </strong>
+
+                                <span>
+                                    سفارش‌های پرداخت‌شده به‌صورت خودکار تأیید شوند.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="autoConfirm"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    فعال‌سازی لغو سفارش
+                                </strong>
+
+                                <span>
+                                    مشتری بتواند سفارش خود را لغو کند.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="allowCancel"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    ثبت سفارش بدون موجودی
+                                </strong>
+
+                                <span>
+                                    امکان ثبت سفارش برای محصولات ناموجود.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="allowOutOfStock">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                حداکثر زمان پرداخت
+                            </label>
+
+                            <select id="paymentTimeout">
+
+                                <option value="15">
+                                    ۱۵ دقیقه
+                                </option>
+
+                                <option value="30" selected>
+                                    ۳۰ دقیقه
+                                </option>
+
+                                <option value="60">
+                                    ۶۰ دقیقه
+                                </option>
+
+                                <option value="120">
+                                    ۲ ساعت
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     NOTIFICATIONS
+                =============================== -->
+
+                <div class="settings-section"
+                    id="notifications">
+
+                    <div class="section-title">
+
+                        <div class="section-icon">
+
+                            <span class="material-icons-round">
+                                notifications
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                تنظیمات اعلان‌ها
+                            </h2>
+
+                            <p>
+                                نوع اعلان‌هایی که دریافت می‌کنید را کنترل کنید.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-list">
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    اعلان سفارش جدید
+                                </strong>
+
+                                <span>
+                                    هنگام ثبت سفارش جدید اطلاع‌رسانی شود.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="newOrderNotification"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    اعلان پرداخت
+                                </strong>
+
+                                <span>
+                                    وضعیت پرداخت‌ها به شما اطلاع داده شود.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="paymentNotification"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    هشدار موجودی کم
+                                </strong>
+
+                                <span>
+                                    هنگام کاهش موجودی محصولات هشدار دریافت کنید.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="stockNotification"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    اعلان‌های سیستمی
+                                </strong>
+
+                                <span>
+                                    رویدادهای مهم سیستم را دریافت کنید.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="systemNotification"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     DISPLAY
+                =============================== -->
+
+                <div class="settings-section"
+                    id="display">
+
+                    <div class="section-title">
+
+                        <div class="section-icon">
+
+                            <span class="material-icons-round">
+                                tune
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                تنظیمات نمایش
+                            </h2>
+
+                            <p>
+                                نحوه نمایش اطلاعات در داشبورد را تنظیم کنید.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-list">
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    نمایش آمار سریع
+                                </strong>
+
+                                <span>
+                                    کارت‌های آماری در صفحه اصلی نمایش داده شوند.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="showStats"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div class="setting-info">
+
+                                <strong>
+                                    نمایش فعالیت‌های اخیر
+                                </strong>
+
+                                <span>
+                                    فعالیت‌های اخیر در داشبورد نمایش داده شوند.
+                                </span>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="showActivity"
+                                    checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                تعداد آیتم در هر صفحه
+                            </label>
+
+                            <select id="itemsPerPage">
+
+                                <option value="10">
+                                    ۱۰ آیتم
+                                </option>
+
+                                <option value="20" selected>
+                                    ۲۰ آیتم
+                                </option>
+
+                                <option value="30">
+                                    ۳۰ آیتم
+                                </option>
+
+                                <option value="50">
+                                    ۵۰ آیتم
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="settings-actions">
+
+                    <button class="reset-btn"
+                        id="resetSettings">
+
+                        <span class="material-icons-round">
+                            restart_alt
+                        </span>
+
+                        بازنشانی
+
+                    </button>
+
+
+                    <button class="save-btn"
+                        id="saveSettings">
+
+                        <span class="material-icons-round">
+                            save
+                        </span>
+
+                        ذخیره تغییرات
+
+                    </button>
+
+                </div>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div class="save-message"
+                    id="saveMessage">
+
+                    <span class="material-icons-round">
+                        check_circle
+                    </span>
+
+                    تنظیمات با موفقیت ذخیره شد.
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==============================
+         MOBILE NAV
+    =============================== -->
+
+    <nav class="mobile-nav">
+
+        <a href="../index.html" class="nav-item">
+
+            <span class="material-icons-round">
+                dashboard
+            </span>
+
+            <span>
+                خانه
+            </span>
+
+        </a>
+
+
+        <a href="orders.html" class="nav-item">
+
+            <span class="material-icons-round">
+                shopping_cart
+            </span>
+
+            <span>
+                سفارش‌ها
+            </span>
+
+        </a>
+
+
+        <a href="notifications.html" class="nav-item">
+
+            <span class="material-icons-round">
+                notifications
+            </span>
+
+            <span>
+                اعلان‌ها
+            </span>
+
+        </a>
+
+
+        <a href="settings.html" class="nav-item active">
+
+            <span class="material-icons-round">
+                settings
+            </span>
+
+            <span>
+                تنظیمات
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- JS -->
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/settings.js"></script>
+
+</body>
+
+</html>
+
