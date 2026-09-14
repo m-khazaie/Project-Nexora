@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>اعلان‌ها | داشبورد مدیریت</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/index.css">
+
+    <!-- Notifications CSS -->
+    <link rel="stylesheet" href="../assets/css/notifications.css">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons-round">dashboard</span>
+                <span>مدیریت‌یار</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-item">
+                <span class="material-icons-round">dashboard</span>
+                <span>نمای کلی</span>
+            </a>
+
+            <a href="orders.html" class="nav-item">
+                <span class="material-icons-round">shopping_cart</span>
+                <span>سفارش‌ها</span>
+            </a>
+
+            <a href="customers.html" class="nav-item">
+                <span class="material-icons-round">groups</span>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="products.html" class="nav-item">
+                <span class="material-icons-round">inventory_2</span>
+                <span>محصولات</span>
+            </a>
+
+            <a href="transactions.html" class="nav-item">
+                <span class="material-icons-round">payments</span>
+                <span>تراکنش‌ها</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span class="material-icons-round">bar_chart</span>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item active">
+                <span class="material-icons-round">notifications</span>
+                <span>اعلان‌ها</span>
+
+                <span class="nav-badge" id="sidebarBadge">3</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons-round">settings</span>
+                <span>تنظیمات</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span class="material-icons-round">menu</span>
+    </button>
+
+
+    <!-- Main Content -->
+    <main class="main-content notifications-page">
+
+        <!-- Page Header -->
+        <header class="notifications-header">
+
+            <div>
+                <span class="page-label">مرکز اطلاع‌رسانی</span>
+
+                <h1>
+                    اعلان‌ها
+                </h1>
+
+                <p>
+                    آخرین رویدادها و فعالیت‌های سیستم را مشاهده کنید.
+                </p>
+            </div>
+
+            <div class="header-actions">
+
+                <div class="unread-counter">
+                    <span class="material-icons-round">
+                        mark_email_unread
+                    </span>
+
+                    <span>
+                        <strong id="unreadCount">3</strong>
+                        اعلان خوانده‌نشده
+                    </span>
+                </div>
+
+                <button class="mark-all-btn" id="markAllBtn">
+                    <span class="material-icons-round">
+                        done_all
+                    </span>
+
+                    خواندن همه
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Notification Panel -->
+        <section class="notifications-panel">
+
+            <!-- Filters -->
+            <div class="notification-filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    همه
+                    <span class="filter-count" id="allCount">8</span>
+                </button>
+
+                <button class="filter-btn" data-filter="unread">
+                    جدید
+                    <span class="filter-count" id="unreadFilterCount">3</span>
+                </button>
+
+                <button class="filter-btn" data-filter="order">
+                    سفارش‌ها
+                </button>
+
+                <button class="filter-btn" data-filter="payment">
+                    پرداخت‌ها
+                </button>
+
+                <button class="filter-btn" data-filter="system">
+                    سیستم
+                </button>
+
+            </div>
+
+
+            <!-- Notifications List -->
+            <div class="notifications-list" id="notificationsList">
+
+
+                <!-- Notification 1 -->
+                <article class="notification-card unread"
+                    data-type="order"
+                    data-id="1">
+
+                    <div class="notification-icon order">
+                        <span class="material-icons-round">
+                            shopping_cart
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                سفارش جدید ثبت شد
+                            </h3>
+
+                            <span class="notification-status">
+                                جدید
+                            </span>
+
+                        </div>
+
+                        <p>
+                            سفارش شماره #1048 توسط مشتری جدید ثبت شده است.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            ۵ دقیقه پیش
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notification 2 -->
+                <article class="notification-card unread"
+                    data-type="payment"
+                    data-id="2">
+
+                    <div class="notification-icon payment">
+                        <span class="material-icons-round">
+                            payments
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                پرداخت با موفقیت انجام شد
+                            </h3>
+
+                            <span class="notification-status">
+                                جدید
+                            </span>
+
+                        </div>
+
+                        <p>
+                            پرداخت سفارش #1046 به مبلغ ۲,۴۵۰,۰۰۰ تومان تأیید شد.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            ۲۳ دقیقه پیش
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notification 3 -->
+                <article class="notification-card unread"
+                    data-type="system"
+                    data-id="3">
+
+                    <div class="notification-icon system">
+                        <span class="material-icons-round">
+                            security
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                ورود جدید به حساب
+                            </h3>
+
+                            <span class="notification-status">
+                                جدید
+                            </span>
+
+                        </div>
+
+                        <p>
+                            ورود جدیدی از یک دستگاه ناشناس شناسایی شد.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            ۱ ساعت پیش
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notification 4 -->
+                <article class="notification-card"
+                    data-type="order"
+                    data-id="4">
+
+                    <div class="notification-icon order">
+                        <span class="material-icons-round">
+                            local_shipping
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                سفارش ارسال شد
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            سفارش شماره #1041 با موفقیت ارسال شد.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            ۳ ساعت پیش
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notification 5 -->
+                <article class="notification-card"
+                    data-type="payment"
+                    data-id="5">
+
+                    <div class="notification-icon payment">
+                        <span class="material-icons-round">
+                            account_balance_wallet
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                تراکنش جدید
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            یک تراکنش جدید با موفقیت در سیستم ثبت شد.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            ۵ ساعت پیش
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notification 6 -->
+                <article class="notification-card"
+                    data-type="system"
+                    data-id="6">
+
+                    <div class="notification-icon system">
+                        <span class="material-icons-round">
+                            backup
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                پشتیبان‌گیری انجام شد
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            نسخه پشتیبان اطلاعات با موفقیت ایجاد شد.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            دیروز
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notification 7 -->
+                <article class="notification-card"
+                    data-type="order"
+                    data-id="7">
+
+                    <div class="notification-icon order">
+                        <span class="material-icons-round">
+                            inventory_2
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                سفارش تکمیل شد
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            سفارش شماره #1037 به وضعیت تکمیل‌شده تغییر کرد.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            دیروز
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notification 8 -->
+                <article class="notification-card"
+                    data-type="system"
+                    data-id="8">
+
+                    <div class="notification-icon system">
+                        <span class="material-icons-round">
+                            update
+                        </span>
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <h3>
+                                سیستم به‌روزرسانی شد
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            آخرین نسخه سیستم با موفقیت نصب و فعال شد.
+                        </p>
+
+                        <div class="notification-meta">
+                            <span class="material-icons-round">
+                                schedule
+                            </span>
+
+                            ۲ روز پیش
+                        </div>
+
+                    </div>
+
+                    <div class="notification-actions">
+
+                        <button class="read-btn"
+                            title="علامت‌گذاری به‌عنوان خوانده‌شده">
+                            <span class="material-icons-round">
+                                done
+                            </span>
+                        </button>
+
+                        <button class="delete-btn"
+                            title="حذف اعلان">
+                            <span class="material-icons-round">
+                                delete_outline
+                            </span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- Empty State -->
+            <div class="empty-notifications" id="emptyNotifications">
+
+                <div class="empty-icon">
+                    <span class="material-icons-round">
+                        notifications_none
+                    </span>
+                </div>
+
+                <h3>
+                    اعلانی وجود ندارد
+                </h3>
+
+                <p>
+                    در این بخش هیچ اعلانی برای نمایش وجود ندارد.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+
+        <a href="../index.html" class="nav-item">
+            <span class="material-icons-round">dashboard</span>
+            <span>خانه</span>
+        </a>
+
+        <a href="orders.html" class="nav-item">
+            <span class="material-icons-round">shopping_cart</span>
+            <span>سفارش‌ها</span>
+        </a>
+
+        <a href="products.html" class="nav-item">
+            <span class="material-icons-round">inventory_2</span>
+            <span>محصولات</span>
+        </a>
+
+        <a href="notifications.html" class="nav-item active">
+            <span class="material-icons-round">notifications</span>
+            <span>اعلان‌ها</span>
+        </a>
+
+    </nav>
+
+
+    <!-- Main JS -->
+    <script src="../assets/js/app.js"></script>
+
+    <!-- Notifications JS -->
+    <script src="../assets/js/notifications.js"></script>
+
+</body>
+
+</html>
+
