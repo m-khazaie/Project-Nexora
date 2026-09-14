@@ -1,0 +1,864 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>گزارش‌ها | داشبورد مدیریت</title>
+
+    <!-- Persian Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/index.css">
+
+    <!-- Reports CSS -->
+    <link rel="stylesheet" href="../assets/css/reports.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="brand">
+                <span class="material-icons-round">dashboard</span>
+
+                <div class="brand-text">
+                    <strong>مدیریت‌یار</strong>
+                    <span>پنل مدیریت</span>
+                </div>
+            </div>
+
+            <button class="sidebar-close" id="sidebarClose">
+                <span class="material-icons-round">close</span>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-item">
+                <span class="material-icons-round">dashboard</span>
+                <span>نمای کلی</span>
+            </a>
+
+            <a href="orders.html" class="nav-item">
+                <span class="material-icons-round">shopping_cart</span>
+                <span>سفارش‌ها</span>
+            </a>
+
+            <a href="customers.html" class="nav-item">
+                <span class="material-icons-round">groups</span>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="products.html" class="nav-item">
+                <span class="material-icons-round">inventory_2</span>
+                <span>محصولات</span>
+            </a>
+
+            <a href="transactions.html" class="nav-item">
+                <span class="material-icons-round">payments</span>
+                <span>تراکنش‌ها</span>
+            </a>
+
+            <a href="reports.html" class="nav-item active">
+                <span class="material-icons-round">bar_chart</span>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons-round">notifications</span>
+                <span>اعلان‌ها</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="material-icons-round">settings</span>
+                <span>تنظیمات</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <span class="material-icons-round">person</span>
+                </div>
+
+                <div class="user-info">
+                    <strong>مدیر سیستم</strong>
+                    <span>Administrator</span>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         OVERLAY
+    ========================== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div class="header-right">
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="material-icons-round">menu</span>
+                </button>
+
+                <div class="breadcrumb">
+                    <span>داشبورد</span>
+                    <span class="material-icons-round">chevron_left</span>
+                    <strong>گزارش‌ها</strong>
+                </div>
+
+            </div>
+
+            <div class="header-left">
+
+                <button class="header-icon-btn" title="اعلان‌ها">
+                    <span class="material-icons-round">notifications_none</span>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="header-date">
+                    <span class="material-icons-round">calendar_today</span>
+                    <span id="currentDate">امروز</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             PAGE
+        ========================== -->
+        <div class="reports-page">
+
+            <!-- Page Intro -->
+            <section class="reports-intro">
+
+                <div>
+                    <span class="section-label">
+                        <span class="material-icons-round">analytics</span>
+                        تحلیل و عملکرد
+                    </span>
+
+                    <h1>گزارش‌ها</h1>
+
+                    <p>
+                        عملکرد فروشگاه را بررسی و اطلاعات مهم کسب‌وکار را تحلیل کنید.
+                    </p>
+                </div>
+
+                <button class="report-export-btn" id="exportReport">
+                    <span class="material-icons-round">download</span>
+                    خروجی گزارش
+                </button>
+
+            </section>
+
+
+            <!-- =========================
+                 FILTER BAR
+            ========================== -->
+            <section class="report-filters">
+
+                <div class="filter-title">
+                    <span class="material-icons-round">tune</span>
+
+                    <div>
+                        <strong>فیلتر گزارش</strong>
+                        <span>اطلاعات موردنظر خود را انتخاب کنید</span>
+                    </div>
+                </div>
+
+                <div class="filter-controls">
+
+                    <div class="filter-field">
+
+                        <label for="reportType">نوع گزارش</label>
+
+                        <div class="select-wrapper">
+                            <select id="reportType">
+                                <option value="all">همه گزارش‌ها</option>
+                                <option value="sales">گزارش فروش</option>
+                                <option value="orders">گزارش سفارش‌ها</option>
+                                <option value="customers">گزارش مشتریان</option>
+                                <option value="products">گزارش محصولات</option>
+                            </select>
+
+                            <span class="material-icons-round">
+                                expand_more
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="filter-field">
+
+                        <label for="reportPeriod">بازه زمانی</label>
+
+                        <div class="select-wrapper">
+                            <select id="reportPeriod">
+                                <option value="week">هفته جاری</option>
+                                <option value="month" selected>ماه جاری</option>
+                                <option value="quarter">سه ماه اخیر</option>
+                                <option value="year">سال جاری</option>
+                            </select>
+
+                            <span class="material-icons-round">
+                                expand_more
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <button class="filter-apply-btn" id="applyFilter">
+                        <span class="material-icons-round">filter_alt</span>
+                        اعمال فیلتر
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SUMMARY CARDS
+            ========================== -->
+            <section class="report-summary-grid">
+
+                <article class="report-card">
+
+                    <div class="report-card-icon sales-icon">
+                        <span class="material-icons-round">
+                            payments
+                        </span>
+                    </div>
+
+                    <div class="report-card-content">
+                        <span>فروش کل</span>
+                        <strong data-value="428500000">۰</strong>
+                        <small>تومان</small>
+
+                        <div class="report-trend positive">
+                            <span class="material-icons-round">
+                                trending_up
+                            </span>
+                            <span>۱۲.۸٪ رشد نسبت به ماه قبل</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="report-card">
+
+                    <div class="report-card-icon orders-icon">
+                        <span class="material-icons-round">
+                            shopping_bag
+                        </span>
+                    </div>
+
+                    <div class="report-card-content">
+                        <span>تعداد سفارش‌ها</span>
+                        <strong data-value="1284">۰</strong>
+
+                        <div class="report-trend positive">
+                            <span class="material-icons-round">
+                                trending_up
+                            </span>
+                            <span>۸.۴٪ افزایش</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="report-card">
+
+                    <div class="report-card-icon customers-icon">
+                        <span class="material-icons-round">
+                            groups
+                        </span>
+                    </div>
+
+                    <div class="report-card-content">
+                        <span>مشتریان جدید</span>
+                        <strong data-value="128">۰</strong>
+
+                        <div class="report-trend positive">
+                            <span class="material-icons-round">
+                                trending_up
+                            </span>
+                            <span>۱۵.۲٪ افزایش</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="report-card">
+
+                    <div class="report-card-icon products-icon">
+                        <span class="material-icons-round">
+                            inventory_2
+                        </span>
+                    </div>
+
+                    <div class="report-card-content">
+                        <span>محصولات پرفروش</span>
+                        <strong data-value="36">۰</strong>
+
+                        <div class="report-trend neutral">
+                            <span class="material-icons-round">
+                                remove
+                            </span>
+                            <span>بدون تغییر</span>
+                        </div>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =========================
+                 CHART SECTION
+            ========================== -->
+            <section class="reports-chart-section">
+
+                <div class="chart-header">
+
+                    <div>
+                        <span class="chart-label">
+                            <span class="material-icons-round">
+                                show_chart
+                            </span>
+
+                            روند فروش
+                        </span>
+
+                        <h2>عملکرد فروش در طول زمان</h2>
+                    </div>
+
+                    <div class="chart-total">
+                        <span>فروش این دوره</span>
+                        <strong>۴۲۸.۵ میلیون تومان</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <div class="chart-y-axis">
+                        <span>۵۰۰M</span>
+                        <span>۴۰۰M</span>
+                        <span>۳۰۰M</span>
+                        <span>۲۰۰M</span>
+                        <span>۱۰۰M</span>
+                        <span>۰</span>
+                    </div>
+
+                    <div class="sales-chart">
+
+                        <div class="chart-grid">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <svg
+                            class="chart-svg"
+                            viewBox="0 0 800 300"
+                            preserveAspectRatio="none"
+                        >
+
+                            <defs>
+                                <linearGradient
+                                    id="salesGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="1"
+                                >
+                                    <stop
+                                        offset="0%"
+                                        stop-opacity=".22"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-opacity="0"
+                                    />
+                                </linearGradient>
+                            </defs>
+
+                            <path
+                                class="chart-area"
+                                d="M0,235
+                                   C70,220 80,190 145,200
+                                   C210,210 220,150 285,165
+                                   C350,180 370,125 430,140
+                                   C490,155 510,100 565,115
+                                   C620,130 650,75 700,95
+                                   C750,115 770,55 800,70
+                                   L800,300
+                                   L0,300 Z"
+                            />
+
+                            <path
+                                class="chart-line"
+                                d="M0,235
+                                   C70,220 80,190 145,200
+                                   C210,210 220,150 285,165
+                                   C350,180 370,125 430,140
+                                   C490,155 510,100 565,115
+                                   C620,130 650,75 700,95
+                                   C750,115 770,55 800,70"
+                            />
+
+                            <circle cx="145" cy="200" r="5"></circle>
+                            <circle cx="285" cy="165" r="5"></circle>
+                            <circle cx="430" cy="140" r="5"></circle>
+                            <circle cx="565" cy="115" r="5"></circle>
+                            <circle cx="700" cy="95" r="5"></circle>
+                            <circle cx="800" cy="70" r="5"></circle>
+
+                        </svg>
+
+                        <div class="chart-x-axis">
+                            <span>هفته اول</span>
+                            <span>هفته دوم</span>
+                            <span>هفته سوم</span>
+                            <span>هفته چهارم</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 LOWER REPORTS
+            ========================== -->
+            <section class="reports-lower-grid">
+
+                <!-- Orders Report -->
+                <article class="mini-report">
+
+                    <div class="mini-report-header">
+
+                        <div>
+                            <span class="material-icons-round">
+                                shopping_cart
+                            </span>
+
+                            <div>
+                                <strong>وضعیت سفارش‌ها</strong>
+                                <small>این ماه</small>
+                            </div>
+                        </div>
+
+                        <button class="icon-action">
+                            <span class="material-icons-round">
+                                more_horiz
+                            </span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="order-status-list">
+
+                        <div class="status-row">
+                            <div class="status-name">
+                                <span class="status-dot completed"></span>
+                                تکمیل‌شده
+                            </div>
+
+                            <strong>۷۶٪</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width: 76%;"></span>
+                        </div>
+
+
+                        <div class="status-row">
+                            <div class="status-name">
+                                <span class="status-dot processing"></span>
+                                در حال پردازش
+                            </div>
+
+                            <strong>۱۴٪</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width: 14%;"></span>
+                        </div>
+
+
+                        <div class="status-row">
+                            <div class="status-name">
+                                <span class="status-dot pending"></span>
+                                در انتظار
+                            </div>
+
+                            <strong>۷٪</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width: 7%;"></span>
+                        </div>
+
+
+                        <div class="status-row">
+                            <div class="status-name">
+                                <span class="status-dot cancelled"></span>
+                                لغوشده
+                            </div>
+
+                            <strong>۳٪</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width: 3%;"></span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Top Products -->
+                <article class="mini-report">
+
+                    <div class="mini-report-header">
+
+                        <div>
+                            <span class="material-icons-round">
+                                trending_up
+                            </span>
+
+                            <div>
+                                <strong>محصولات پرفروش</strong>
+                                <small>بر اساس فروش</small>
+                            </div>
+                        </div>
+
+                        <button class="icon-action">
+                            <span class="material-icons-round">
+                                more_horiz
+                            </span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="top-products-list">
+
+                        <div class="top-product">
+
+                            <div class="product-rank">۱</div>
+
+                            <div class="product-data">
+                                <strong>لپ‌تاپ پرو</strong>
+                                <span>۱۲۴ فروش</span>
+                            </div>
+
+                            <strong class="product-price">
+                                ۸۴.۵M
+                            </strong>
+
+                        </div>
+
+
+                        <div class="top-product">
+
+                            <div class="product-rank">۲</div>
+
+                            <div class="product-data">
+                                <strong>هدفون بی‌سیم</strong>
+                                <span>۹۸ فروش</span>
+                            </div>
+
+                            <strong class="product-price">
+                                ۴۲.۸M
+                            </strong>
+
+                        </div>
+
+
+                        <div class="top-product">
+
+                            <div class="product-rank">۳</div>
+
+                            <div class="product-data">
+                                <strong>ساعت هوشمند</strong>
+                                <span>۸۶ فروش</span>
+                            </div>
+
+                            <strong class="product-price">
+                                ۳۶.۲M
+                            </strong>
+
+                        </div>
+
+
+                        <div class="top-product">
+
+                            <div class="product-rank">۴</div>
+
+                            <div class="product-data">
+                                <strong>کیف لپ‌تاپ</strong>
+                                <span>۷۴ فروش</span>
+                            </div>
+
+                            <strong class="product-price">
+                                ۱۸.۹M
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =========================
+                 REPORT TABLE
+            ========================== -->
+            <section class="report-table-section">
+
+                <div class="table-section-header">
+
+                    <div>
+                        <span class="section-label">
+                            <span class="material-icons-round">
+                                table_chart
+                            </span>
+                            خلاصه گزارش
+                        </span>
+
+                        <h2>جزئیات عملکرد</h2>
+                    </div>
+
+                    <button class="view-all-btn" id="viewAllReports">
+                        مشاهده کامل
+                        <span class="material-icons-round">
+                            arrow_back
+                        </span>
+                    </button>
+
+                </div>
+
+
+                <div class="report-table-wrapper">
+
+                    <table class="report-table">
+
+                        <thead>
+                            <tr>
+                                <th>عنوان گزارش</th>
+                                <th>تعداد</th>
+                                <th>مبلغ</th>
+                                <th>رشد</th>
+                                <th>وضعیت</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="table-title">
+                                        <span class="material-icons-round">
+                                            payments
+                                        </span>
+                                        فروش ماهانه
+                                    </div>
+                                </td>
+
+                                <td>۱,۲۸۴</td>
+
+                                <td>۴۲۸,۵۰۰,۰۰۰ تومان</td>
+
+                                <td class="growth-positive">
+                                    +۱۲.۸٪
+                                </td>
+
+                                <td>
+                                    <span class="report-status success">
+                                        مطلوب
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-title">
+                                        <span class="material-icons-round">
+                                            shopping_cart
+                                        </span>
+                                        سفارش‌ها
+                                    </div>
+                                </td>
+
+                                <td>۱,۲۸۴</td>
+
+                                <td>۳۹۶,۲۰۰,۰۰۰ تومان</td>
+
+                                <td class="growth-positive">
+                                    +۸.۴٪
+                                </td>
+
+                                <td>
+                                    <span class="report-status success">
+                                        مطلوب
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-title">
+                                        <span class="material-icons-round">
+                                            groups
+                                        </span>
+                                        مشتریان
+                                    </div>
+                                </td>
+
+                                <td>۱۲۸</td>
+
+                                <td>—</td>
+
+                                <td class="growth-positive">
+                                    +۱۵.۲٪
+                                </td>
+
+                                <td>
+                                    <span class="report-status success">
+                                        رو به رشد
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-title">
+                                        <span class="material-icons-round">
+                                            inventory_2
+                                        </span>
+                                        محصولات
+                                    </div>
+                                </td>
+
+                                <td>۳۶</td>
+
+                                <td>۱۸۲,۴۰۰,۰۰۰ تومان</td>
+
+                                <td class="growth-neutral">
+                                    ۰٪
+                                </td>
+
+                                <td>
+                                    <span class="report-status warning">
+                                        پایدار
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav">
+
+    <a href="../index.html" class="mobile-nav-item">
+        <span class="material-icons-round">dashboard</span>
+        <span>خانه</span>
+    </a>
+
+    <a href="orders.html" class="mobile-nav-item">
+        <span class="material-icons-round">shopping_cart</span>
+        <span>سفارش‌ها</span>
+    </a>
+
+    <a href="customers.html" class="mobile-nav-item">
+        <span class="material-icons-round">groups</span>
+        <span>مشتریان</span>
+    </a>
+
+    <a href="products.html" class="mobile-nav-item">
+        <span class="material-icons-round">inventory_2</span>
+        <span>محصولات</span>
+    </a>
+
+    <a href="reports.html" class="mobile-nav-item active">
+        <span class="material-icons-round">bar_chart</span>
+        <span>گزارش‌ها</span>
+    </a>
+
+</nav>
+
+
+<!-- Main JS -->
+<script src="../assets/js/app.js"></script>
+
+<!-- Reports JS -->
+<script src="../assets/js/reports.js"></script>
+
+</body>
+</html>
+
