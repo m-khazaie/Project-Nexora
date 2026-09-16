@@ -728,3 +728,404 @@
     color: var(--primary-color, #4a6cf7);
 }
 
+/* =========================================
+   APPEARANCE SETTINGS
+========================================= */
+
+.appearance-block {
+
+    margin-bottom: 24px;
+
+    padding: 20px;
+
+    border: 1px solid var(--border-color, #e7e7e7);
+
+    border-radius: 16px;
+
+    background: var(--surface-bg, #f8fafc);
+
+}
+
+.appearance-block:last-child {
+    margin-bottom: 0;
+}
+
+
+.appearance-block-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+.appearance-block-header > div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+.appearance-block-header strong {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+.appearance-block-header span {
+
+    font-size: 11px;
+
+    color: var(--text-muted, #777);
+
+}
+
+
+/* =========================================
+   THEME OPTIONS
+========================================= */
+
+.theme-options {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+}
+
+
+.theme-option {
+
+    padding: 10px;
+
+    border: 2px solid transparent;
+
+    border-radius: 14px;
+
+    background: var(--card-bg, #fff);
+
+    color: inherit;
+
+    text-align: right;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+}
+
+.theme-option:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(91, 91, 214, 0.25);
+
+}
+
+
+.theme-option.active {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+/* Preview */
+
+.theme-preview {
+
+    height: 100px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--border-color);
+
+}
+
+
+/* Sidebar preview */
+
+.preview-sidebar {
+
+    width: 25%;
+
+}
+
+
+/* Content preview */
+
+.preview-content {
+
+    flex: 1;
+
+    padding: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.preview-content span {
+
+    height: 8px;
+
+    width: 70%;
+
+    border-radius: 5px;
+
+}
+
+
+/* Light */
+
+.light-preview {
+
+    background: #f5f7fb;
+
+}
+
+.light-preview .preview-sidebar {
+
+    background: #ffffff;
+
+}
+
+.light-preview .preview-content span {
+
+    background: #dfe3ea;
+
+}
+
+
+/* Dark */
+
+.dark-preview {
+
+    background: #111318;
+
+}
+
+.dark-preview .preview-sidebar {
+
+    background: #181b22;
+
+}
+
+.dark-preview .preview-content span {
+
+    background: #303641;
+
+}
+
+
+/* Theme info */
+
+.theme-option-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.theme-option-info > .material-icons-round {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+
+    font-size: 19px;
+
+}
+
+.theme-option-info div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+.theme-option-info strong {
+
+    font-size: 12px;
+
+}
+
+.theme-option-info small {
+
+    font-size: 9px;
+
+    color: var(--text-muted);
+
+}
+
+
+/* =========================================
+   COLOR OPTIONS
+========================================= */
+
+.color-options {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.color-option {
+
+    position: relative;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 4px;
+
+    border: 2px solid transparent;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.color-option span {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+}
+
+
+.color-option[data-color="blue"] span {
+    background: #5b5bd6;
+}
+
+.color-option[data-color="purple"] span {
+    background: #7c3aed;
+}
+
+.color-option[data-color="green"] span {
+    background: #16a34a;
+}
+
+.color-option[data-color="orange"] span {
+    background: #ea580c;
+}
+
+.color-option[data-color="red"] span {
+    background: #dc2626;
+}
+
+
+.color-option.active {
+
+    border-color: var(--primary);
+
+}
+
+
+.color-option:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.selected-color {
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    box-shadow:
+        0 0 0 4px var(--primary-soft);
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .theme-options {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .appearance-block {
+
+        padding: 15px;
+
+    }
+
+}

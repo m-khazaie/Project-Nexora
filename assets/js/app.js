@@ -469,3 +469,30 @@ document
 
     });
 
+/* =========================================
+   GLOBAL THEME SYSTEM
+========================================= */
+
+(function () {
+
+    const savedTheme =
+        localStorage.getItem(
+            "dashboardTheme"
+        ) || "light";
+
+
+    const savedAccent =
+        localStorage.getItem(
+            "dashboardAccent"
+        ) || "blue";
+
+
+    document.body.dataset.theme =
+        savedTheme;
+
+
+    document.body.dataset.accent =
+        savedAccent;
+
+
+})();

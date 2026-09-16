@@ -1949,6 +1949,253 @@ a {
 
 }
 
+/* =========================================
+   THEME SYSTEM
+========================================= */
+
+:root {
+
+    --card-bg: var(--surface);
+    --border-color: var(--border);
+    --text-color: var(--text);
+    --text-muted: var(--text-secondary);
+    --surface-bg: var(--surface-soft);
+    --accent-color: var(--primary);
+
+}
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+body[data-theme="dark"] {
+
+    --bg: #111318;
+
+    --surface: #181b22;
+
+    --surface-soft: #20242d;
+
+    --text: #f1f3f5;
+
+    --text-secondary: #aab1bf;
+
+    --text-muted: #7f8796;
+
+    --border: #2a2f39;
+
+    --primary-soft: rgba(91, 91, 214, 0.16);
+
+    --card-bg: var(--surface);
+
+    --border-color: var(--border);
+
+    --text-color: var(--text);
+
+    --text-muted: var(--text-secondary);
+
+    --surface-bg: var(--surface-soft);
+
+    color-scheme: dark;
+
+}
+
+
+/* =========================================
+   GLOBAL THEME ELEMENTS
+========================================= */
+
+body[data-theme="dark"] {
+
+    background: var(--bg);
+    color: var(--text);
+
+}
+
+
+/* Inputs */
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] select {
+
+    background: var(--surface);
+
+    color: var(--text);
+
+}
+
+
+/* Tables */
+
+body[data-theme="dark"] table {
+
+    color: var(--text);
+
+}
+
+
+/* Common white surfaces */
+
+body[data-theme="dark"] .settings-section,
+body[data-theme="dark"] .settings-menu,
+body[data-theme="dark"] .transactions-section,
+body[data-theme="dark"] .transaction-stat-card,
+body[data-theme="dark"] .chart-card,
+body[data-theme="dark"] .chart-actions,
+body[data-theme="dark"] .stat-card,
+body[data-theme="dark"] .dashboard-placeholder {
+
+    background: var(--surface);
+
+    border-color: var(--border);
+
+}
+
+
+/* Sidebar */
+
+body[data-theme="dark"] .sidebar {
+
+    background: var(--surface);
+
+    border-color: var(--border);
+
+}
+
+
+/* Header */
+
+body[data-theme="dark"] .header {
+
+    background: var(--surface);
+
+    border-color: var(--border);
+
+}
+
+
+/* Mobile Navigation */
+
+body[data-theme="dark"] .mobile-nav {
+
+    background: rgba(24, 27, 34, 0.96);
+
+    border-color: var(--border);
+
+}
+
+
+/* Hover */
+
+body[data-theme="dark"] .nav-item:hover,
+body[data-theme="dark"] .icon-button:hover {
+
+    background: var(--surface-soft);
+
+}
+
+
+/* =========================================
+   ACCENT COLORS
+========================================= */
+
+body[data-accent="blue"] {
+
+    --primary: #5b5bd6;
+    --primary-dark: #4949bd;
+    --primary-soft: #eeeeff;
+    --accent-color: #5b5bd6;
+
+}
+
+
+body[data-accent="purple"] {
+
+    --primary: #7c3aed;
+    --primary-dark: #6d28d9;
+    --primary-soft: #f0eaff;
+    --accent-color: #7c3aed;
+
+}
+
+
+body[data-accent="green"] {
+
+    --primary: #16a34a;
+    --primary-dark: #15803d;
+    --primary-soft: #eaf8ef;
+    --accent-color: #16a34a;
+
+}
+
+
+body[data-accent="orange"] {
+
+    --primary: #ea580c;
+    --primary-dark: #c2410c;
+    --primary-soft: #fff0e8;
+    --accent-color: #ea580c;
+
+}
+
+
+body[data-accent="red"] {
+
+    --primary: #dc2626;
+    --primary-dark: #b91c1c;
+    --primary-soft: #feecec;
+    --accent-color: #dc2626;
+
+}
+
+
+/* Dark accent soft colors */
+
+body[data-theme="dark"][data-accent="blue"] {
+    --primary-soft: rgba(91, 91, 214, 0.16);
+}
+
+body[data-theme="dark"][data-accent="purple"] {
+    --primary-soft: rgba(124, 58, 237, 0.16);
+}
+
+body[data-theme="dark"][data-accent="green"] {
+    --primary-soft: rgba(22, 163, 74, 0.16);
+}
+
+body[data-theme="dark"][data-accent="orange"] {
+    --primary-soft: rgba(234, 88, 12, 0.16);
+}
+
+body[data-theme="dark"][data-accent="red"] {
+    --primary-soft: rgba(220, 38, 38, 0.16);
+}
+
+
+/* =========================================
+   SMOOTH THEME TRANSITION
+========================================= */
+
+body,
+.sidebar,
+.header,
+.mobile-nav,
+.settings-section,
+.settings-menu,
+.stat-card,
+.chart-card,
+.transactions-section,
+.transaction-stat-card {
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
 
 
 
