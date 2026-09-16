@@ -224,6 +224,19 @@
 
                 </button>
 
+                <button class="settings-tab"
+                    data-section="appearance">
+                
+                    <span class="material-icons-round">
+                        palette
+                    </span>
+                
+                    <span>
+                        تنظیمات ظاهری
+                    </span>
+                
+                </button>
+
             </aside>
 
 
@@ -644,6 +657,7 @@
 
                             </label>
 
+                           
                         </div>
 
                     </div>
@@ -774,6 +788,250 @@
 
                 </div>
 
+ <!-- ==============================
+                                 APPEARANCE
+                            =============================== -->
+                            
+                            <div class="settings-section"
+                                id="appearance">
+                            
+                                <div class="section-title">
+                            
+                                    <div class="section-icon">
+                            
+                                        <span class="material-icons-round">
+                                            palette
+                                        </span>
+                            
+                                    </div>
+                            
+                                    <div>
+                            
+                                        <h2>
+                                            تنظیمات ظاهری
+                                        </h2>
+                            
+                                        <p>
+                                            ظاهر و نحوه نمایش رابط کاربری داشبورد را شخصی‌سازی کنید.
+                                        </p>
+                            
+                                    </div>
+                            
+                                </div>
+                            
+                            
+                                <div class="setting-list">
+                            
+                            
+                                    <!-- UI Density -->
+                            
+                                    <div class="setting-row">
+                            
+                                        <div class="setting-info">
+                            
+                                            <strong>
+                                                تراکم رابط کاربری
+                                            </strong>
+                            
+                                            <span>
+                                                میزان فاصله بین عناصر داشبورد را مشخص کنید.
+                                            </span>
+                            
+                                        </div>
+                            
+                                        <select id="uiDensity">
+                            
+                                            <option value="comfortable">
+                                                راحت
+                                            </option>
+                            
+                                            <option value="normal" selected>
+                                                عادی
+                                            </option>
+                            
+                                            <option value="compact">
+                                                فشرده
+                                            </option>
+                            
+                                        </select>
+                            
+                                    </div>
+                            
+                            
+                                    <!-- Border Radius -->
+                            
+                                    <div class="setting-row">
+                            
+                                        <div class="setting-info">
+                            
+                                            <strong>
+                                                میزان گردی گوشه‌ها
+                                            </strong>
+                            
+                                            <span>
+                                                میزان گرد بودن کارت‌ها و عناصر رابط کاربری.
+                                            </span>
+                            
+                                        </div>
+                            
+                                        <select id="borderRadius">
+                            
+                                            <option value="small">
+                                                کم
+                                            </option>
+                            
+                                            <option value="medium" selected>
+                                                متوسط
+                                            </option>
+                            
+                                            <option value="large">
+                                                زیاد
+                                            </option>
+                            
+                                        </select>
+                            
+                                    </div>
+                            
+                            
+                                    <!-- Card Shadow -->
+                            
+                                    <div class="setting-row">
+                            
+                                        <div class="setting-info">
+                            
+                                            <strong>
+                                                سایه کارت‌ها
+                                            </strong>
+                            
+                                            <span>
+                                                میزان سایه اطراف کارت‌های داشبورد.
+                                            </span>
+                            
+                                        </div>
+                            
+                                        <select id="cardShadow">
+                            
+                                            <option value="none">
+                                                بدون سایه
+                                            </option>
+                            
+                                            <option value="soft" selected>
+                                                نرم
+                                            </option>
+                            
+                                            <option value="strong">
+                                                پررنگ
+                                            </option>
+                            
+                                        </select>
+                            
+                                    </div>
+                            
+                            
+                                    <!-- Sidebar Style -->
+                            
+                                    <div class="setting-row">
+                            
+                                        <div class="setting-info">
+                            
+                                            <strong>
+                                                سبک نوار کناری
+                                            </strong>
+                            
+                                            <span>
+                                                ظاهر کلی Sidebar داشبورد را انتخاب کنید.
+                                            </span>
+                            
+                                        </div>
+                            
+                                        <select id="sidebarStyle">
+                            
+                                            <option value="classic" selected>
+                                                کلاسیک
+                                            </option>
+                            
+                                            <option value="minimal">
+                                                مینیمال
+                                            </option>
+                            
+                                            <option value="modern">
+                                                مدرن
+                                            </option>
+                            
+                                        </select>
+                            
+                                    </div>
+                            
+                            
+                                    <!-- Font Size -->
+                            
+                                    <div class="setting-row">
+                            
+                                        <div class="setting-info">
+                            
+                                            <strong>
+                                                اندازه نوشته‌ها
+                                            </strong>
+                            
+                                            <span>
+                                                اندازه کلی نوشته‌های رابط کاربری.
+                                            </span>
+                            
+                                        </div>
+                            
+                                        <select id="fontSize">
+                            
+                                            <option value="small">
+                                                کوچک
+                                            </option>
+                            
+                                            <option value="normal" selected>
+                                                عادی
+                                            </option>
+                            
+                                            <option value="large">
+                                                بزرگ
+                                            </option>
+                            
+                                        </select>
+                            
+                                    </div>
+                            
+                            
+                                    <!-- Animations -->
+                            
+                                    <div class="setting-row">
+                            
+                                        <div class="setting-info">
+                            
+                                            <strong>
+                                                انیمیشن‌های رابط کاربری
+                                            </strong>
+                            
+                                            <span>
+                                                حرکت‌های نرم هنگام تعامل با عناصر داشبورد.
+                                            </span>
+                            
+                                        </div>
+                            
+                                        <label class="switch">
+                            
+                                            <input
+                                                type="checkbox"
+                                                id="uiAnimations"
+                                                checked>
+                            
+                                            <span class="slider"></span>
+                            
+                                        </label>
+                            
+                                    </div>
+                            
+                            
+                                </div>
+                            
+                            </div>
+
 
                 <!-- ACTIONS -->
 
@@ -818,6 +1076,30 @@
 
                 </div>
 
+                </div>
+
+                <!-- PROFILE BUTTON -->
+                
+                <div class="profile-action">
+                
+                    <a href="profile.html" class="profile-button">
+                
+                        <span class="material-icons-round">
+                            account_circle
+                        </span>
+                
+                        <span class="profile-button-text">
+                            <strong>پروفایل کاربری</strong>
+                            <small>مدیریت اطلاعات حساب و پروفایل</small>
+                        </span>
+                
+                        <span class="material-icons-round profile-arrow">
+                            arrow_back
+                        </span>
+                
+                    </a>
+                
+                </div>
 
             </section>
 

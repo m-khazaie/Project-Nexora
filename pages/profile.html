@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>پروفایل | داشبورد مدیریت</title>
+
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo">
+                <span class="material-icons-round">dashboard</span>
+                <span>مدیریت‌یار</span>
+            </div>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-item">
+                <span class="material-icons-round">dashboard</span>
+                <span>نمای کلی</span>
+            </a>
+
+            <a href="orders.html" class="nav-item">
+                <span class="material-icons-round">shopping_cart</span>
+                <span>سفارش‌ها</span>
+            </a>
+
+            <a href="customers.html" class="nav-item">
+                <span class="material-icons-round">groups</span>
+                <span>مشتریان</span>
+            </a>
+
+            <a href="products.html" class="nav-item">
+                <span class="material-icons-round">inventory_2</span>
+                <span>محصولات</span>
+            </a>
+
+            <a href="transactions.html" class="nav-item">
+                <span class="material-icons-round">payments</span>
+                <span>تراکنش‌ها</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <span class="material-icons-round">bar_chart</span>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <span class="material-icons-round">notifications</span>
+                <span>اعلان‌ها</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <span class="material-icons-round">settings</span>
+                <span>تنظیمات</span>
+            </a>
+
+            <a href="profile.html" class="nav-item active">
+                <span class="material-icons-round">person</span>
+                <span>پروفایل</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span class="material-icons-round">menu</span>
+    </button>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content profile-page">
+
+        <header class="profile-header">
+
+            <div>
+
+                <span class="page-label">
+                    حساب کاربری
+                </span>
+
+                <h1>
+                    پروفایل من
+                </h1>
+
+                <p>
+                    اطلاعات حساب و مشخصات کاربری خود را مدیریت کنید.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <div class="profile-layout">
+
+
+            <!-- PROFILE CARD -->
+
+            <section class="profile-card">
+
+                <div class="profile-cover"></div>
+
+                <div class="profile-main">
+
+                    <div class="profile-avatar-wrapper">
+
+                        <div class="profile-avatar">
+
+                            <img
+                                id="profileImage"
+                                src="https://ui-avatars.com/api/?name=Admin&background=5b5ce2&color=fff&size=180"
+                                alt="تصویر پروفایل">
+
+                        </div>
+
+                        <label class="change-photo"
+                            for="imageInput"
+                            title="تغییر تصویر">
+
+                            <span class="material-icons-round">
+                                photo_camera
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="imageInput"
+                            accept="image/*"
+                            hidden>
+
+                    </div>
+
+
+                    <div class="profile-identity">
+
+                        <h2 id="profileNamePreview">
+                            مدیر سیستم
+                        </h2>
+
+                        <p>
+                            مدیر ارشد
+                        </p>
+
+                        <span class="account-status">
+                            <span></span>
+                            حساب فعال
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-stats">
+
+                    <div>
+                        <strong>۱۲۴</strong>
+                        <span>سفارش</span>
+                    </div>
+
+                    <div>
+                        <strong>۸۶</strong>
+                        <span>مشتری</span>
+                    </div>
+
+                    <div>
+                        <strong>۳۲</strong>
+                        <span>محصول</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INFORMATION -->
+
+            <section class="profile-section">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <span class="material-icons-round">
+                            person
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            اطلاعات شخصی
+                        </h2>
+
+                        <p>
+                            اطلاعات اصلی حساب کاربری
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form">
+
+                    <div class="profile-field">
+
+                        <label>
+                            نام و نام خانوادگی
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="material-icons-round">
+                                badge
+                            </span>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                value="مدیر سیستم">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            ایمیل
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="material-icons-round">
+                                email
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                value="admin@example.com">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            شماره تماس
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="material-icons-round">
+                                phone
+                            </span>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                value="09121234567">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            نقش کاربری
+                        </label>
+
+                        <div class="input-wrapper disabled">
+
+                            <span class="material-icons-round">
+                                admin_panel_settings
+                            </span>
+
+                            <input
+                                type="text"
+                                value="مدیر سیستم"
+                                disabled>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECURITY -->
+
+            <section class="profile-section">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon security">
+                        <span class="material-icons-round">
+                            lock
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            امنیت حساب
+                        </h2>
+
+                        <p>
+                            رمز عبور و امنیت حساب خود را مدیریت کنید.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="password-area">
+
+                    <div class="profile-field">
+
+                        <label>
+                            رمز عبور فعلی
+                        </label>
+
+                        <div class="input-wrapper password-wrapper">
+
+                            <span class="material-icons-round">
+                                lock_outline
+                            </span>
+
+                            <input
+                                type="password"
+                                id="currentPassword"
+                                placeholder="رمز عبور فعلی">
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="currentPassword">
+
+                                <span class="material-icons-round">
+                                    visibility
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            رمز عبور جدید
+                        </label>
+
+                        <div class="input-wrapper password-wrapper">
+
+                            <span class="material-icons-round">
+                                lock_reset
+                            </span>
+
+                            <input
+                                type="password"
+                                id="newPassword"
+                                placeholder="رمز عبور جدید">
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="newPassword">
+
+                                <span class="material-icons-round">
+                                    visibility
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            تکرار رمز عبور جدید
+                        </label>
+
+                        <div class="input-wrapper password-wrapper">
+
+                            <span class="material-icons-round">
+                                password
+                            </span>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="تکرار رمز عبور">
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirmPassword">
+
+                                <span class="material-icons-round">
+                                    visibility
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="security-note">
+
+                    <span class="material-icons-round">
+                        info
+                    </span>
+
+                    <span>
+                        برای امنیت بیشتر، از یک رمز عبور قوی و غیرتکراری استفاده کنید.
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACTIONS -->
+
+            <div class="profile-actions">
+
+                <button
+                    class="cancel-btn"
+                    id="cancelProfile">
+
+                    انصراف
+
+                </button>
+
+
+                <button
+                    class="save-profile-btn"
+                    id="saveProfile">
+
+                    <span class="material-icons-round">
+                        save
+                    </span>
+
+                    ذخیره اطلاعات
+
+                </button>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div
+                class="profile-message"
+                id="profileMessage">
+
+                <span class="material-icons-round">
+                    check_circle
+                </span>
+
+                اطلاعات پروفایل با موفقیت ذخیره شد.
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- MOBILE NAV -->
+
+    <nav class="mobile-nav">
+
+        <a href="../index.html" class="nav-item">
+
+            <span class="material-icons-round">
+                dashboard
+            </span>
+
+            <span>
+                خانه
+            </span>
+
+        </a>
+
+
+        <a href="orders.html" class="nav-item">
+
+            <span class="material-icons-round">
+                shopping_cart
+            </span>
+
+            <span>
+                سفارش‌ها
+            </span>
+
+        </a>
+
+
+        <a href="notifications.html" class="nav-item">
+
+            <span class="material-icons-round">
+                notifications
+            </span>
+
+            <span>
+                اعلان‌ها
+            </span>
+
+        </a>
+
+
+        <a href="profile.html" class="nav-item active">
+
+            <span class="material-icons-round">
+                person
+            </span>
+
+            <span>
+                پروفایل
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/profile.js"></script>
+
+</body>
+
+</html>
