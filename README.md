@@ -316,9 +316,3 @@ Potential future improvements include:
 Frontend Developer
 
 GitHub: [@m-khazaie](https://github.com/m-khazaie)
-
----
-
-## 📄 License
-
-This project is created for educational, development, and portfolio purposes.
