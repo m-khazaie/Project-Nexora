@@ -496,3 +496,169 @@ document
 
 
 })();
+/* =========================================
+   GLOBAL DASHBOARD SETTINGS
+========================================= */
+
+(function () {
+
+    function loadGlobalSettings() {
+
+        let settings = {};
+
+        try {
+
+            const saved =
+                localStorage.getItem(
+                    "dashboardSettings"
+                );
+
+            if (saved) {
+
+                settings =
+                    JSON.parse(saved);
+
+            }
+
+        } catch (error) {
+
+            console.error(
+                "خطا در تنظیمات سراسری:",
+                error
+            );
+
+        }
+
+
+        /* =====================================
+           THEME
+        ===================================== */
+
+        const theme =
+            settings.theme ||
+            localStorage.getItem(
+                "dashboardTheme"
+            ) ||
+            "light";
+
+
+        document.body.dataset.theme =
+            theme;
+
+
+        /* =====================================
+           ACCENT
+        ===================================== */
+
+        const accent =
+            settings.accent ||
+            localStorage.getItem(
+                "dashboardAccent"
+            ) ||
+            "blue";
+
+
+        document.body.dataset.accent =
+            accent;
+
+
+        /* =====================================
+           FONT SIZE
+        ===================================== */
+
+        if (settings.fontSize) {
+
+            document.body.dataset.fontSize =
+                settings.fontSize;
+
+        }
+
+
+        /* =====================================
+           UI DENSITY
+        ===================================== */
+
+        if (settings.uiDensity) {
+
+            document.body.dataset.density =
+                settings.uiDensity;
+
+        }
+
+
+        /* =====================================
+           BORDER RADIUS
+        ===================================== */
+
+        if (settings.borderRadius) {
+
+            document.body.dataset.radius =
+                settings.borderRadius;
+
+        }
+
+
+        /* =====================================
+           CARD SHADOW
+        ===================================== */
+
+        if (settings.cardShadow) {
+
+            document.body.dataset.shadow =
+                settings.cardShadow;
+
+        }
+
+
+        /* =====================================
+           SIDEBAR STYLE
+        ===================================== */
+
+        if (settings.sidebarStyle) {
+
+            document.body.dataset.sidebarStyle =
+                settings.sidebarStyle;
+
+        }
+
+
+        /* =====================================
+           ANIMATIONS
+        ===================================== */
+
+        if (
+            settings.uiAnimations === false
+        ) {
+
+            document.body.classList.add(
+                "animations-disabled"
+            );
+
+        } else {
+
+            document.body.classList.remove(
+                "animations-disabled"
+            );
+
+        }
+
+    }
+
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadGlobalSettings
+        );
+
+    } else {
+
+        loadGlobalSettings();
+
+    }
+
+})();

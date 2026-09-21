@@ -2626,5 +2626,168 @@ textarea {
 
 }
 
+/* =========================================
+   GLOBAL APPEARANCE SETTINGS
+========================================= */
 
+
+/* =========================================
+   FONT SIZE
+========================================= */
+
+body[data-font-size="small"] {
+    font-size: 13px;
+}
+
+body[data-font-size="normal"] {
+    font-size: 14px;
+}
+
+body[data-font-size="large"] {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   DENSITY
+========================================= */
+
+body[data-density="comfortable"] .stat-card,
+body[data-density="comfortable"] .settings-card,
+body[data-density="comfortable"] .transaction-stat-card {
+    padding: 24px;
+}
+
+body[data-density="normal"] .stat-card,
+body[data-density="normal"] .settings-card,
+body[data-density="normal"] .transaction-stat-card {
+    padding: 20px;
+}
+
+body[data-density="compact"] .stat-card,
+body[data-density="compact"] .settings-card,
+body[data-density="compact"] .transaction-stat-card {
+    padding: 15px;
+}
+
+
+/* =========================================
+   BORDER RADIUS
+========================================= */
+
+body[data-radius="small"] {
+    --global-radius: 8px;
+}
+
+body[data-radius="medium"] {
+    --global-radius: 14px;
+}
+
+body[data-radius="large"] {
+    --global-radius: 22px;
+}
+
+
+/* کارت‌ها */
+
+body[data-radius="small"] .stat-card,
+body[data-radius="small"] .settings-card,
+body[data-radius="small"] .transaction-stat-card,
+body[data-radius="small"] .chart-card {
+    border-radius: 8px;
+}
+
+body[data-radius="medium"] .stat-card,
+body[data-radius="medium"] .settings-card,
+body[data-radius="medium"] .transaction-stat-card,
+body[data-radius="medium"] .chart-card {
+    border-radius: 14px;
+}
+
+body[data-radius="large"] .stat-card,
+body[data-radius="large"] .settings-card,
+body[data-radius="large"] .transaction-stat-card,
+body[data-radius="large"] .chart-card {
+    border-radius: 22px;
+}
+
+
+/* =========================================
+   CARD SHADOW
+========================================= */
+
+body[data-shadow="none"] .stat-card,
+body[data-shadow="none"] .settings-card,
+body[data-shadow="none"] .transaction-stat-card,
+body[data-shadow="none"] .chart-card {
+    box-shadow: none;
+}
+
+body[data-shadow="soft"] .stat-card,
+body[data-shadow="soft"] .settings-card,
+body[data-shadow="soft"] .transaction-stat-card,
+body[data-shadow="soft"] .chart-card {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+body[data-shadow="strong"] .stat-card,
+body[data-shadow="strong"] .settings-card,
+body[data-shadow="strong"] .transaction-stat-card,
+body[data-shadow="strong"] .chart-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   SIDEBAR STYLE
+========================================= */
+
+body[data-sidebar-style="minimal"] .sidebar {
+    box-shadow: none;
+}
+
+body[data-sidebar-style="minimal"] .nav-item {
+    border-radius: 8px;
+}
+
+body[data-sidebar-style="modern"] .sidebar {
+    border-radius: 0 0 24px 24px;
+}
+
+body[data-sidebar-style="modern"] .nav-item {
+    border-radius: 14px;
+}
+
+
+/* =========================================
+   DISABLE ANIMATIONS
+========================================= */
+
+body.animations-disabled *,
+body.animations-disabled *::before,
+body.animations-disabled *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0s !important;
+}
+
+
+/* =========================================
+   GLOBAL TRANSITION
+========================================= */
+
+body,
+.stat-card,
+.settings-card,
+.transaction-stat-card,
+.chart-card,
+.sidebar,
+.header,
+.nav-item {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
 
