@@ -1129,3 +1129,218 @@
     }
 
 }
+
+/* =========================================
+   DAY 14
+   SETTINGS RESPONSIVE FINAL
+========================================= */
+
+@media (max-width: 900px) {
+
+    .settings-layout {
+        grid-template-columns: 190px minmax(0, 1fr);
+    }
+
+
+    .settings-tab {
+        font-size: 11px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .settings-page {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .settings-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+
+    /* ==============================
+       SETTINGS MENU
+    ============================== */
+
+    .settings-menu {
+
+        width: 100%;
+
+        display: flex;
+
+        overflow-x: auto;
+
+        gap: 8px;
+
+        padding: 8px;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+
+    .settings-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .settings-tab {
+
+        flex: 0 0 auto;
+
+        min-width: max-content;
+
+        white-space: nowrap;
+    }
+
+
+    .settings-tab::after {
+
+        right: auto;
+
+        bottom: 0;
+
+        top: auto;
+
+        left: 50%;
+
+        width: 0;
+
+        height: 3px;
+
+        transform:
+            translateX(-50%);
+
+    }
+
+
+    .settings-tab.active::after {
+
+        width: 45%;
+
+        height: 3px;
+
+    }
+
+
+    /* ==============================
+       CONTENT
+    ============================== */
+
+    .settings-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .settings-section {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+
+    /* ==============================
+       APPEARANCE
+    ============================== */
+
+    .theme-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .appearance-block {
+        padding: 16px;
+    }
+
+
+    /* ==============================
+       ACTIONS
+    ============================== */
+
+    .settings-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .settings-actions button {
+        width: 100%;
+    }
+
+
+    .profile-button {
+        min-width: 0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .settings-page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .settings-header h1 {
+        font-size: 24px;
+    }
+
+
+    .section-title {
+        align-items: flex-start;
+    }
+
+
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+
+    .setting-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    .setting-row select {
+        width: 100%;
+    }
+
+
+    .appearance-block {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+
+    .color-options {
+        gap: 9px;
+    }
+
+
+    .color-option {
+        width: 38px;
+        height: 38px;
+    }
+
+}

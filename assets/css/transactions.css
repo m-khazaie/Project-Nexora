@@ -641,3 +641,72 @@
     }
 
 }
+
+/* =========================================
+   DAY 14
+   TRANSACTIONS RESPONSIVE FINAL
+========================================= */
+
+@media (max-width: 760px) {
+
+    .transactions-intro {
+        width: 100%;
+    }
+
+
+    .transactions-section {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    .transactions-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+
+    .transaction-search,
+    .transactions-toolbar select,
+    .transactions-toolbar .reset-btn,
+    .transactions-toolbar .secondary-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .transactions-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .transaction-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .transactions-section {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+
+    .transaction-actions {
+        flex-wrap: wrap;
+    }
+
+
+    .transactions-pagination {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}

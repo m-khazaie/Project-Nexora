@@ -882,3 +882,95 @@
 
 }
 
+/* =========================================
+   DAY 14
+   REPORTS RESPONSIVE FINAL
+========================================= */
+
+@media (max-width: 760px) {
+
+    .reports-page {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .reports-lower-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .report-summary-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .report-filters {
+        width: 100%;
+    }
+
+
+    .filter-controls {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+
+    .filter-apply-btn {
+        width: 100%;
+    }
+
+
+    .reports-chart-section {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    .chart-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+
+    .report-table-section {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    .report-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .report-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .reports-page {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+
+    .report-card-content strong {
+        font-size: 18px;
+    }
+
+
+    .chart-wrapper {
+        height: 230px;
+    }
+
+}

@@ -730,3 +730,79 @@
 
 }
 
+/* =========================================
+   DAY 14
+   PROFILE RESPONSIVE FINAL
+========================================= */
+
+@media (max-width: 760px) {
+
+    .profile-page {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .profile-form {
+        width: 100%;
+    }
+
+
+    .profile-stats {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    .profile-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .profile-actions button {
+        width: 100%;
+    }
+
+
+    .profile-section {
+        padding: 16px 13px;
+    }
+
+
+    .profile-field {
+        width: 100%;
+    }
+
+
+    .profile-avatar {
+        width: 72px;
+        height: 72px;
+    }
+
+}

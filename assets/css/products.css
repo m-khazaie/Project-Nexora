@@ -587,3 +587,76 @@
    DESKTOP SIDEBAR SPACE FIX
 ========================================= */
 
+/* =========================================
+   DAY 14
+   PRODUCTS RESPONSIVE FINAL
+========================================= */
+
+@media (max-width: 760px) {
+
+    .products-intro {
+        width: 100%;
+    }
+
+
+    .products-section {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    .products-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+
+    .product-search,
+    .products-toolbar select,
+    .products-toolbar .reset-btn,
+    .products-toolbar .secondary-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .products-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+
+    .product-actions {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .product-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .products-section {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+
+    .products-pagination {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    .pagination-buttons {
+        justify-content: center;
+    }
+
+}

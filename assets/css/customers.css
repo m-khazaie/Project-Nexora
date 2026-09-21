@@ -639,3 +639,70 @@
 
 }
 
+/* =========================================
+   DAY 14
+   CUSTOMERS RESPONSIVE FINAL
+========================================= */
+
+@media (max-width: 760px) {
+
+    .customers-page {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .customer-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+
+    .customer-search,
+    .customer-filter,
+    .secondary-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .customers-section {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    .customers-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .customer-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .customers-section {
+        border-radius: 14px;
+    }
+
+
+    .customers-pagination {
+        padding: 14px;
+    }
+
+
+    .pagination-buttons {
+        justify-content: center;
+    }
+
+}
+

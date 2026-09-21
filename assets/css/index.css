@@ -2196,7 +2196,435 @@ body,
 
 }
 
+/* =========================================
+   DAY 14
+   FINAL RESPONSIVE SYSTEM
+========================================= */
 
+
+/* =========================================
+   RESPONSIVE SAFETY
+========================================= */
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .main,
+    .main-content,
+    .main-wrapper,
+    .page-content {
+        width: calc(100% - var(--sidebar-width));
+        min-width: 0;
+    }
+
+
+    .stats-grid {
+        gap: 14px;
+    }
+
+
+    .stat-card {
+        min-width: 0;
+    }
+
+
+    .header-title,
+    .content-header,
+    .page-intro {
+        min-width: 0;
+    }
+
+
+    .header-title h1,
+    .content-header h1,
+    .page-intro h1 {
+        overflow-wrap: anywhere;
+    }
+
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 900px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .header-actions {
+        gap: 8px;
+    }
+
+
+    .header-title h1 {
+        font-size: 23px;
+    }
+
+
+    .content {
+        min-width: 0;
+    }
+
+
+    .chart-card {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    .chart-area {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .main,
+    .main-content,
+    .main-wrapper,
+    .page-content,
+    .content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin-right: 0;
+    }
+
+
+    .header,
+    .top-header {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .header-title {
+        min-width: 0;
+        flex: 1;
+    }
+
+
+    .header-title h1 {
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    .header-actions {
+        flex-shrink: 0;
+    }
+
+
+    .header-actions .icon-button,
+    .header-icon-btn {
+        flex-shrink: 0;
+    }
+
+
+    /* ==============================
+       STATS
+    ============================== */
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    .stat-card {
+        min-width: 0;
+        padding: 15px;
+    }
+
+
+    .stat-value {
+        font-size: 22px;
+    }
+
+
+    /* ==============================
+       CHART
+    ============================== */
+
+    .chart-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .chart-header {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+
+    .chart-actions {
+        max-width: 100%;
+    }
+
+
+    /* ==============================
+       BUTTONS
+    ============================== */
+
+    .primary-button,
+    .primary-btn,
+    .secondary-btn,
+    .reset-btn {
+        min-height: 42px;
+    }
+
+
+    /* ==============================
+       TABLE SAFETY
+    ============================== */
+
+    .orders-table-wrapper,
+    .customers-table-wrapper,
+    .products-table-wrapper,
+    .transactions-table-wrapper,
+    .report-table-wrapper {
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .orders-table,
+    .customers-table,
+    .products-table,
+    .transactions-table,
+    .report-table {
+
+        min-width: 650px;
+    }
+
+
+    /* ==============================
+       MOBILE NAV
+    ============================== */
+
+    .mobile-nav {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .header {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .top-header {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .header-title h1 {
+        font-size: 18px;
+    }
+
+
+    .header-title p {
+        display: none;
+    }
+
+
+    .content-header,
+    .page-intro {
+        gap: 12px;
+    }
+
+
+    .content-header h1,
+    .page-intro h1 {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+
+    .stat-card {
+        padding: 14px;
+    }
+
+
+    .stat-value {
+        font-size: 21px;
+    }
+
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .chart-card {
+        border-radius: 14px;
+    }
+
+
+    .chart-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .chart-actions {
+        width: 100%;
+    }
+
+
+    .chart-filter {
+        width: 100%;
+    }
+
+
+    .primary-button,
+    .primary-btn,
+    .secondary-btn,
+    .reset-btn {
+        width: 100%;
+    }
+
+
+    .orders-table,
+    .customers-table,
+    .products-table,
+    .transactions-table,
+    .report-table {
+
+        min-width: 600px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .header-actions {
+        gap: 5px;
+    }
+
+
+    .header-actions .icon-button,
+    .header-icon-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .mobile-nav {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+
+    .mobile-nav-item,
+    .nav-item {
+        min-width: 0;
+    }
+
+
+    .content-header h1,
+    .page-intro h1 {
+        font-size: 22px;
+    }
+
+
+    .stat-card {
+        padding: 13px;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .main,
+    .main-content,
+    .main-wrapper,
+    .page-content,
+    .content {
+        padding-bottom: 90px;
+    }
+
+}
 
 
 

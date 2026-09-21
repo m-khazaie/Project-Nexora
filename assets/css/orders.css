@@ -632,3 +632,79 @@
     }
 
 }
+
+/* =========================================
+   DAY 14
+   ORDERS RESPONSIVE FINAL
+========================================= */
+
+@media (max-width: 760px) {
+
+    .orders-section {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .orders-section-header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+
+    .orders-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+
+    .order-search,
+    .order-filter,
+    .secondary-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .orders-pagination {
+        gap: 12px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .order-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .orders-section {
+        border-radius: 14px;
+    }
+
+
+    .orders-section-header {
+        padding: 16px;
+    }
+
+
+    .orders-toolbar {
+        padding: 0 16px 16px;
+    }
+
+
+    .orders-pagination {
+        padding: 14px 16px;
+    }
+
+
+    .pagination-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
